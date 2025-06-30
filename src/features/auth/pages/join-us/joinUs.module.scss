@@ -1,0 +1,86 @@
+@import "../../../../styles/functions";
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+
+  .content {
+    width: rem(426);
+    display: flex;
+    flex-direction: column;
+    gap: rem(30);
+
+    .top {
+      h3 {
+        font-size: rem(30);
+      }
+
+      & > p {
+        color: #8692a6;
+        font-size: rem(18);
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: rem(28);
+
+      .item {
+        display: flex;
+        align-items: center;
+        gap: rem(28);
+        padding: rem(28);
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border-radius: rem(8);
+        border: rem(1) solid var(--white);
+
+        &:hover {
+          border: rem(1) solid #065ad7;
+          background: #f5f9ff;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          .item__logo {
+            background: #065ad7;
+
+            svg {
+              path {
+                stroke: var(--white);
+              }
+            }
+          }
+        }
+
+        &__logo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: rem(14);
+          border-radius: 50%;
+          border: rem(1.4) solid #065ad7;
+
+          svg {
+            path {
+              stroke: #065ad7;
+            }
+          }
+        }
+      }
+    }
+
+    .bottom {
+      text-align: center;
+      color: #8692a6;
+
+      span {
+        cursor: pointer;
+        color: #065ad7;
+        font-weight: 500;
+      }
+    }
+  }
+}

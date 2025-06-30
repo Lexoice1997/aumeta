@@ -1,0 +1,25 @@
+@import "../../../../styles/functions";
+
+.sign_up {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding: rem(38) 0;
+
+    p {
+      color: var(--gray-400);
+      font-size: rem(14);
+      font-weight: 400;
+      line-height: rem(20);
+      margin: 0;
+    }
+  }
+}

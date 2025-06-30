@@ -1,0 +1,60 @@
+@import "../../../../../styles/functions.scss";
+
+.code {
+  div {
+    display: flex;
+    column-gap: rem(8);
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+
+    input[type="number"] {
+      appearance: textfield;
+    }
+
+    input {
+      height: rem(52);
+      width: rem(50) !important;
+      border-radius: rem(10);
+      border: rem(1) solid var(--gray-300);
+      color: var(--gray-700);
+      font-size: rem(24);
+      font-weight: 400;
+      line-height: normal;
+      outline: none;
+    }
+  }
+
+  .resend {
+    display: flex;
+    justify-content: center;
+    margin: rem(12) 0 rem(24);
+
+    p {
+      color: var(--gray-500);
+      font-size: rem(14);
+      font-weight: 400;
+      margin: 0;
+
+      span {
+        color: var(--blue-600);
+      }
+    }
+
+    button {
+      padding: 0;
+      width: max-content;
+      height: max-content;
+      color: var(--blue-600);
+      font-size: rem(14);
+      font-weight: 400;
+    }
+  }
+
+  button {
+    width: 100%;
+  }
+}

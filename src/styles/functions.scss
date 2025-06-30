@@ -1,0 +1,5 @@
+$BODY_FONT_SIZE: 16;
+
+@function rem($pixels) {
+	@return calc($pixels / $BODY_FONT_SIZE) + rem;
+}

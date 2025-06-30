@@ -1,0 +1,32 @@
+@import "../../../../styles/functions";
+
+.content {
+  padding: rem(12);
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: rem(24);
+    border-bottom: rem(1) solid var(--gray-300);
+
+    .organisation {
+      font-size: rem(16);
+      color: var(--black);
+    }
+
+    h2 {
+      font-size: rem(40);
+      font-weight: 400;
+    }
+
+    h3 {
+      font-size: rem(24);
+      font-weight: 400;
+      margin-top: rem(24);
+    }
+
+    p {
+      color: var(--gray-600);
+    }
+  }
+}

@@ -1,0 +1,110 @@
+@import "../../../styles/functions";
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(24) rem(48);
+    background: #bad5f3;
+
+    &__navbar {
+      display: flex;
+      align-items: center;
+      gap: rem(38);
+      list-style: none;
+      color: #000000;
+
+      li:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      gap: rem(24);
+
+      .profile {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+
+        &__left {
+          display: flex;
+          flex-direction: column;
+          gap: rem(4);
+
+          h3 {
+            font-weight: 400;
+            font-size: rem(14);
+          }
+
+          p {
+            font-size: rem(10);
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: rem(60);
+    background: #262425;
+    padding: rem(24) rem(60);
+    color: var(--white);
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 rem(40);
+      padding-top: rem(36);
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+        width: rem(240);
+
+        p {
+          color: var(--gray-400);
+        }
+
+        .socials {
+          padding-top: rem(20);
+          display: flex;
+          align-items: center;
+          gap: rem(20);
+        }
+      }
+    }
+
+    .bottom {
+      padding: 0 rem(40);
+      padding-top: rem(15);
+      border-top: rem(1) solid var(--white);
+      font-size: rem(12);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__right {
+        display: flex;
+        align-items: center;
+        gap: rem(16);
+      }
+    }
+  }
+}
+
+.dropdown__item {
+  display: flex;
+  align-items: center;
+  gap: rem(4);
+}

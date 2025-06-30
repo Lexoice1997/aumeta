@@ -1,0 +1,69 @@
+@import "../../../styles/functions";
+
+.phone_input {
+  position: relative;
+
+  :global {
+    .ant-form-item-has-error {
+      span {
+        color: #ff4d4f;
+        border-color: #ff4d4f;
+      }
+    }
+
+    .ant-form-item-extra {
+      min-height: unset;
+    }
+  }
+
+  .input_mask {
+    padding: rem(8) rem(11) rem(8) rem(72);
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: rem(38);
+    width: rem(58);
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    border-right: rem(1) solid var(--gray-300);
+    background-color: var(--gray-50);
+    border-radius: rem(8) rem(0) rem(0) rem(8);
+    z-index: 1;
+    color: #414e62;
+    font-size: rem(14);
+    font-weight: 400;
+    line-height: rem(20);
+  }
+
+  .spin {
+    bottom: 22px !important;
+    right: -10px !important;
+    position: absolute;
+
+    span {
+      position: static;
+      background: none;
+      border-right: none;
+
+      svg {
+        color: var(--primary-500);
+      }
+    }
+  }
+}
+
+:disabled {
+  background: rgba(0, 0, 0, 4%) !important;
+  color: rgba(0, 0, 0, 25%) !important;
+  border-color: #d0d5dd;
+  cursor: not-allowed;
+  box-shadow: none;
+
+  &:hover {
+    border-color: var(--gray-300) !important;
+  }
+}

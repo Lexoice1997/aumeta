@@ -1,0 +1,12 @@
+@import "../../../styles/functions";
+
+.forbidden {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  button {
+    margin-top: 1rem;
+  }
+}
