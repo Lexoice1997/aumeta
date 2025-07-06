@@ -14,7 +14,7 @@ import { setPostInternshipModalData } from "../../slices/mainSlice"
 import { workModeTypeEnums } from "../../utils/enums/workModeTypeEnums"
 import { WorkModelReqModel } from "../../utils/models/workModelReqModel"
 import { useTranslation } from "react-i18next"
-import { languages } from "@utils/enums/languages"
+// import { languages } from "@utils/enums/languages"
 
 import styles from "./postInternship.module.scss"
 
@@ -32,7 +32,7 @@ export const PostInternshipModal = () => {
   const { data: industries, isLoading: loadingIndustries } = useGetIndustries(visible)
   const [state, setState] = useState<WorkModelReqModel>()
   const create = useCreateWorkMode()
-  const { t, i18n } = useTranslation('main')
+  const { t } = useTranslation('main')
 
   const onClose = () => {
     dispatch(setPostInternshipModalData({ visible: false }))

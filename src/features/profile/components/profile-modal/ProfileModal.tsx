@@ -1,4 +1,4 @@
-import { Form, Modal, Input, Upload } from "antd"
+import { Form, Modal, Input } from "antd"
 import { useAppDispatch, useAppSelector } from "@hooks/useRedux"
 import { setProfileModalData } from '../../slices/profileSlice'
 import { useSetClientProfile } from '../../services/profileMutations'

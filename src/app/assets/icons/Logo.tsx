@@ -2,7 +2,7 @@ type Props = {
   color?: string
 }
 
-export const Logo = ({ color }: Props) => {
+export const Logo = ({ }: Props) => {
   return (
     <svg width='197' height='53' viewBox='0 0 197 53' fill='none' xmlns='http://www.w3.org/2000/svg'>
       <path
