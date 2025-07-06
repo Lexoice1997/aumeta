@@ -45,7 +45,7 @@ export const PostOneTimeJobModal = () => {
 
     return create.mutateAsync({
       ...obj,
-      workModeType: workModeTypeEnums.JOB,
+      workModeType: workModeTypeEnums.ONE_TIME_JOB,
       jobCategoryId: 1,
       jobTime: dayjs(obj?.jobTime).format(dayjsFormats.DATE),
     })
