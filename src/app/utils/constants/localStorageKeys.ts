@@ -7,4 +7,5 @@ export const localStorageKeys = {
   CART: "cart",
   PIECEWORK_SETTING: "pieceworkSetting",
   SALES: "sales",
+  LANGUAGE: "language",
 }

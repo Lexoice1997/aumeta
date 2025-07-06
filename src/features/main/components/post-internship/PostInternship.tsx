@@ -13,6 +13,8 @@ import { useGetJobCategories } from "../../services/mainQueries"
 import { setPostInternshipModalData } from "../../slices/mainSlice"
 import { workModeTypeEnums } from "../../utils/enums/workModeTypeEnums"
 import { WorkModelReqModel } from "../../utils/models/workModelReqModel"
+import { useTranslation } from "react-i18next"
+import { languages } from "@utils/enums/languages"
 
 import styles from "./postInternship.module.scss"
 
@@ -30,6 +32,7 @@ export const PostInternshipModal = () => {
   const { data: industries, isLoading: loadingIndustries } = useGetIndustries(visible)
   const [state, setState] = useState<WorkModelReqModel>()
   const create = useCreateWorkMode()
+  const { t, i18n } = useTranslation('main')
 
   const onClose = () => {
     dispatch(setPostInternshipModalData({ visible: false }))
@@ -57,19 +60,19 @@ export const PostInternshipModal = () => {
       visible={visible}
       destroyOnClose
       close={onClose}
-      title='Post Internship'
+      title={t('homeModals.titles.postInternship')}
       formInstance={formInstance}
       onFinish={onFinish}
       onSecondStep={onSecondStep}
       isLoading={create.isPending}
       steps={[
         {
-          title: "Post Internship",
-          description: "To submit a vacancy, please fill in the form",
+          title: t('homeModals.titles.postInternship'),
+          description: t('homeModals.description'),
           component: () => (
             <div className={styles.content}>
               <Flex gap='small'>
-                <Item name='countryId' label='Country' rules={[{ required: true, message: "" }]}>
+                <Item name='countryId' label={t('homeModals.contactInformation.country')} rules={[{ required: true, message: "" }]}>
                   <Select
                     suffixIcon={<SelectSuffix isLoading={loadingCountries} />}
                     showSearch
@@ -83,7 +86,7 @@ export const PostInternshipModal = () => {
                     }))}
                   />
                 </Item>
-                <Item name='regionId' label='Region' rules={[{ required: true, message: "" }]}>
+                <Item name='regionId' label={t('homeModals.contactInformation.region')} rules={[{ required: true, message: "" }]}>
                   <Select
                     suffixIcon={<SelectSuffix isLoading={loadingRegions} />}
                     showSearch
@@ -95,16 +98,16 @@ export const PostInternshipModal = () => {
                 </Item>
               </Flex>
               <Flex gap='small'>
-                <Item name='city' label='City' rules={[{ required: true, message: "" }]}>
+                <Item name='city' label={t('homeModals.contactInformation.city')} rules={[{ required: true, message: "" }]}>
                   <Input />
                 </Item>
-                <Item name='address' label='Address' rules={[{ required: true, message: "" }]}>
+                <Item name='address' label={t('homeModals.contactInformation.address')} rules={[{ required: true, message: "" }]}>
                   <Input />
                 </Item>
               </Flex>
               <Flex gap='small'>
-                <PhoneInput />
-                <Item name='email' label='Email'>
+                <PhoneInput label={t('homeModals.checkInformation.phoneNumber')} />
+                <Item name='email' label={t('homeModals.contactInformation.email')}>
                   <Input />
                 </Item>
               </Flex>
@@ -115,14 +118,14 @@ export const PostInternshipModal = () => {
           ),
         },
         {
-          title: "Internship information",
+          title: t('homeModals.titles.postInternship'),
           component: () => (
             <div className={styles.content}>
-              <Item name='name' label='Profession title'>
+              <Item name='name' label={t('homeModals.freelancerInformation.professionTitle')}>
                 <Input />
               </Item>
               <Flex gap='small'>
-                <Item name='jobCategoryId' label='Job category'>
+                <Item name='jobCategoryId' label={t('homeModals.internshipInformation.jobCategory')}>
                   <Select
                     suffixIcon={<SelectSuffix isLoading={loadingJobCategories} />}
                     showSearch
@@ -135,7 +138,7 @@ export const PostInternshipModal = () => {
                     }))}
                   />
                 </Item>
-                <Item name='industryId' label='Industry'>
+                <Item name='industryId' label={t('homeModals.internshipInformation.industry')}>
                   <Select
                     suffixIcon={<SelectSuffix isLoading={loadingIndustries} />}
                     showSearch
@@ -150,24 +153,24 @@ export const PostInternshipModal = () => {
                 </Item>
               </Flex>
               <Flex gap='small'>
-                <Item name='requirements' label='Requirements'>
+                <Item name='requirements' label={t('homeModals.checkInformation.requirements')}>
                   <TextArea />
                 </Item>
-                <Item name='responsibilities' label='Obligations'>
+                <Item name='responsibilities' label={t('homeModals.checkInformation.obligations')}>
                   <TextArea />
                 </Item>
               </Flex>
-              <Item name='organisation' label='Company name' rules={[{ required: true, message: "" }]}>
+              <Item name='organisation' label={t('homeModals.internshipInformation.companyName')} rules={[{ required: true, message: "" }]}>
                 <Input />
               </Item>
-              <Item name='description' label='Job description'>
+              <Item name='description' label={t('homeModals.internshipInformation.jobDescription')}>
                 <TextArea />
               </Item>
             </div>
           ),
         },
         {
-          title: "Check information",
+          title: t('homeModals.checkInformation.header'),
           component: () => (
             <div className={styles.content}>
               <div className={styles.content__item}>
@@ -181,46 +184,46 @@ export const PostInternshipModal = () => {
                 </Flex>
               </div>
               <div className={styles.content__item}>
-                <h3>Job Summery</h3>
+                <h3>{t('homeModals.checkInformation.jobSummery')}</h3>
                 <p>{state?.summery}</p>
-                <h3>Requirements</h3>
+                <h3>{t('homeModals.checkInformation.requirements')}</h3>
                 <p>{state?.requirements}</p>
-                <h3>Obligations</h3>
+                <h3>{t('homeModals.checkInformation.obligations')}</h3>
                 <p>{state?.responsibilities}</p>
-                <h3>Industry</h3>
+                <h3>{t('homeModals.internshipInformation.industry')}</h3>
                 <p>
                   <span>{industries?.data?.find((el) => el.id === state?.industryId)?.name?.default}</span>
                 </p>
-                <h3>Conditions</h3>
+                <h3>{t('homeModals.checkInformation.conditions')}</h3>
                 <p>{state?.description}</p>
               </div>
               <div className={styles.content__item}>
-                <h3>Contacts</h3>
+                <h3>{t('homeModals.checkInformation.contacts')}</h3>
                 <Flex gap={8}>
                   <p>
-                    Phone number: <span>{state?.phone}</span>
+                    {t('homeModals.checkInformation.phoneNumber')}: <span>{state?.phone}</span>
                   </p>
                   <p>
-                    Email: <span>{state?.email}</span>
+                    {t('homeModals.contactInformation.email')}: <span>{state?.email}</span>
                   </p>
                 </Flex>
               </div>
               <div className={styles.content__item}>
-                <h3>Address</h3>
+                <h3>{t('homeModals.contactInformation.address')}</h3>
                 <Flex gap={8}>
                   <p>
-                    Country: <span>{countries?.find((el) => el.id === state?.countryId)?.name?.default}</span>
+                    {t('homeModals.contactInformation.country')}: <span>{countries?.find((el) => el.id === state?.countryId)?.name?.default}</span>
                   </p>
                   <p>
-                    Region: <span>{regions?.find((el) => el.id === state?.regionId)?.name?.default}</span>
+                    {t('homeModals.contactInformation.region')}: <span>{regions?.find((el) => el.id === state?.regionId)?.name?.default}</span>
                   </p>
                   <p>
-                    City: <span>{state?.city}</span>
+                    {t('homeModals.contactInformation.city')}: <span>{state?.city}</span>
                   </p>
                 </Flex>
                 <Flex>
                   <p>
-                    Address: <span>{state?.address}</span>
+                    {t('homeModals.contactInformation.address')}: <span>{state?.address}</span>
                   </p>
                 </Flex>
               </div>

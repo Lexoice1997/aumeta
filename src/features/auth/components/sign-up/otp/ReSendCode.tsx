@@ -4,12 +4,14 @@ import { FC, useEffect, useRef, useState } from "react"
 import { useCheckEmail } from "../../../services/authMutations"
 
 import styles from "./signUpOtp.module.scss"
+import { useTranslation } from "react-i18next"
 
 type Props = {
   email: string
 }
 
 export const ReSendCode: FC<Props> = ({ email }) => {
+  const { t } = useTranslation('auth')
   const [timer, setTimer] = useState(59)
   const ref = useRef<number>(0)
   const sendCode = useCheckEmail()
@@ -47,11 +49,11 @@ export const ReSendCode: FC<Props> = ({ email }) => {
     <div className={styles.resend}>
       {timer ? (
         <p>
-          Повторное отправка смс через <span>00:{timer < 10 ? `0${timer}` : timer}</span>
+          {t('resetForm.resendSmsAfter')} <span>00:{timer < 10 ? `0${timer}` : timer}</span>
         </p>
       ) : (
         <Button loading={sendCode.isPending} type='link' onClick={onReSendCode}>
-          Повторное отправка смс через
+          {t('resetForm.resendSmsAfter')}
         </Button>
       )}
     </div>

@@ -9,4 +9,7 @@ export const rootPaths = {
   MAIN: {
     INDEX: "/main",
   },
+  PROFILE: {
+    INDEX: "/profile"
+  }
 }

@@ -2,6 +2,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit"
 
 import { localStorageKeys } from "@utils/constants/localStorageKeys"
 import { sliceNames } from "@utils/constants/sliceNames"
+import { languages } from "@utils/enums/languages"
 import { LocalStorage } from "@utils/helpers/localStorage"
 
 const initialState: {
@@ -17,6 +18,7 @@ const initialState: {
   userPasswordModal: boolean
   deleteConfirmModalVisible: boolean
   isNeedNavbar: boolean
+  language: languages
 } = {
   refreshPasswordModalData: { visible: false },
   sidebar: { collapsible: false, collapsed: true },
@@ -24,6 +26,7 @@ const initialState: {
   userPasswordModal: false,
   deleteConfirmModalVisible: false,
   isNeedNavbar: false,
+  language: LocalStorage.get(localStorageKeys.LANGUAGE) as languages || languages.UZ
 }
 
 const appSlice = createSlice({
@@ -55,6 +58,10 @@ const appSlice = createSlice({
     setIsNeedNavbar: (state, action: PayloadAction<boolean>) => {
       state.isNeedNavbar = action.payload
     },
+    setLanguage: (state, action: PayloadAction<languages>) => {
+      LocalStorage.set(localStorageKeys.LANGUAGE, action.payload)
+      state.language = action.payload
+    }
   },
 })
 
@@ -65,5 +72,6 @@ export const {
   setUserPasswordModal,
   deleteConfirmModalVisible,
   setIsNeedNavbar,
+  setLanguage,
 } = appSlice.actions
 export const appReducer = appSlice.reducer

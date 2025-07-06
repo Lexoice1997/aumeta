@@ -1,0 +1,38 @@
+{
+  "profilePage": {
+    "industry": "Тармак",
+    "services": "Кызматтар",
+    "servicesEmpty": "Посттор жетишсиз",
+    "recentlyPost": "Жакында жарыяланган",
+    "postsEmpty": "посттор жок",
+    "information": "Маалымат",
+    "personals": "{{size}} кызматкерлер",
+    "contacts": "Байланыштар"
+  },
+  "modalsForm": {
+    "editProfile": {
+      "title": "Профильди түзөтүү",
+      "companyLogo": "Компаниянын логотиби",
+      "upload": "Жүктөө",
+      "companyName": "Компаниянын аты",
+      "industry": "Тармак",
+      "service": "Кызмат"
+    },
+    "editInformations": {
+      "title": "Маалыматты түзөтүү",
+      "workingHours": "Иш сааттары",
+      "companySize": "Компаниянын өлчөмү",
+      "information": "Маалымат"
+    },
+    "editContactInformation": {
+      "title": "Байланыш маалыматын түзөтүү",
+      "phone": "Телефон",
+      "email": "Электрондук почта",
+      "website": "Веб-сайт",
+      "country": "Өлкө",
+      "region": "Аймак",
+      "city": "Шаар",
+      "address": "Дарек"
+    }
+  }
+}

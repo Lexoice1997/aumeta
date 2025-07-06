@@ -5,6 +5,7 @@ import dayjs from "dayjs"
 import { Provider } from "react-redux"
 import { BrowserRouter } from "react-router-dom"
 
+import '../src/i18n/config.ts';
 import { antdTheme } from "@utils/constants/antTheme"
 import { dayjsLocales } from "@utils/constants/dayjsLocales"
 import { queryClient } from "@utils/constants/queryClient.ts"

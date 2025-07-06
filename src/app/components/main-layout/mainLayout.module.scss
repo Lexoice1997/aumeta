@@ -1,15 +1,44 @@
 @import "../../../styles/functions";
 
+.md_hidden {
+  display: block !important;
+  @media screen and (max-width: 700px) {
+    display: none !important;
+  }
+}
+
+.md_visible {
+  display: none !important;
+  @media screen and (max-width: 700px) {
+    display: flex !important;
+  }
+}
+
+.container {
+  max-width: rem(1440);
+  margin: 0 auto;
+}
+
+.column_links {
+  padding-top: rem(40);
+  display: flex;
+  gap: rem(12);
+  flex-direction: column;
+}
+
 .main {
   display: flex;
   flex-direction: column;
 
   .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: rem(24) rem(48);
     background: #bad5f3;
+    
+    &_items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
     &__navbar {
       display: flex;
@@ -20,6 +49,10 @@
 
       li:hover {
         cursor: pointer;
+      }
+
+      @media screen and (max-width: 950px) {
+        display: none;
       }
     }
 
@@ -32,6 +65,7 @@
         display: flex;
         align-items: center;
         gap: rem(10);
+        cursor: pointer;
 
         &__left {
           display: flex;
@@ -53,16 +87,27 @@
   }
 
   .footer {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     gap: rem(60);
     background: #262425;
-    padding: rem(24) rem(60);
+    padding: rem(24) 0;
     color: var(--white);
 
     .top {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: rem(12);
+      margin-bottom: rem(40);
+
+      @media screen and (max-width: 900px) {
+        grid-template-columns: repeat(2, 1fr);       
+      }
+      
+      @media screen and (max-width: 500px) {
+        grid-template-columns: repeat(1, 1fr);       
+      }
+
       padding: 0 rem(40);
       padding-top: rem(36);
 

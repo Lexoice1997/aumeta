@@ -1,4 +1,5 @@
 import { Button } from "antd"
+import { useTranslation } from "react-i18next"
 
 import { FreelanceIcon } from "@assets/icons/FreelanceIcon"
 import { JobIcon } from "@assets/icons/JobIcon"
@@ -19,6 +20,8 @@ import {
 import styles from "./index.module.scss"
 
 export const MainPage = () => {
+  const { t } = useTranslation('main')
+
   const dispatch = useAppDispatch()
 
   const onOpenPostModal = () => {
@@ -41,14 +44,13 @@ export const MainPage = () => {
     <div className={styles.main}>
       <div className={styles.section_top}>
         <div className={styles.left}>
-          <h1>Hire Top Talent Without Breaking the Bank!</h1>
+          <h1>{t('homePage.headline')}</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua.
+            {t('homePage.description')}
           </p>
           <div className={styles.left__buttons}>
-            <Button type='primary'>Post job</Button>
-            <Button type='primary'>How to use?</Button>
+            <Button type='primary'>{t('homePage.actions.postJob')}</Button>
+            <Button type='primary'>{t('homePage.actions.howToUse')}</Button>
           </div>
         </div>
         <div className={styles.right}>
@@ -56,50 +58,46 @@ export const MainPage = () => {
         </div>
       </div>
       <div className={styles.section_post}>
-        <h2>Post your information</h2>
+        <h2>{t('homePage.postYourInformation')}</h2>
         <div className={styles.posts}>
           <div className={styles.post}>
             <JobIcon />
-            <h3>Job</h3>
+            <h3>{t('homePage.jobTypes.job.title')}</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua.
+              {t('homePage.jobTypes.job.description')}
             </p>
             <Button type='primary' onClick={onOpenPostModal}>
-              Templates <SendIcon />
+              {t('homePage.templates.templates')} <SendIcon />
             </Button>
           </div>
           <div className={styles.post}>
             <FreelanceIcon />
-            <h3>Freelance</h3>
+            <h3>{t('homePage.jobTypes.freelance.title')}</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua.
+              {t('homePage.jobTypes.freelance.description')}
             </p>
             <Button type='primary' onClick={onOpenFreelancetModal}>
-              Templates <SendIcon />
+              {t('homePage.templates.templates')} <SendIcon />
             </Button>
           </div>
           <div className={styles.post}>
             <JobIcon />
-            <h3>One-time job</h3>
+            <h3>{t('homePage.jobTypes.oneTimeJob.title')}</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua.
+              {t('homePage.jobTypes.oneTimeJob.description')}
             </p>
             <Button type='primary' onClick={onOpenOneTimeModal}>
-              Templates <SendIcon />
+              {t('homePage.templates.templates')} <SendIcon />
             </Button>
           </div>
           <div className={styles.post}>
             <FreelanceIcon />
-            <h3>Internship</h3>
+            <h3>{t('homePage.jobTypes.internship.title')}</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua.
+              {t('homePage.jobTypes.internship.description')}
             </p>
             <Button type='primary' onClick={onOpenInternshipModal}>
-              Templates <SendIcon />
+              {t('homePage.templates.templates')} <SendIcon />
             </Button>
           </div>
         </div>

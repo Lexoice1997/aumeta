@@ -1,6 +1,7 @@
 import { Button, Form, Input } from 'antd';
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import { rootPaths } from '@utils/constants/rootPaths';
 import { useSendCode } from '../../services/authMutations';
@@ -14,6 +15,7 @@ type Props = {
 };
 
 export const EnterEmail: FC<Props> = ({ afterSuccess }) => {
+	const { t } = useTranslation('auth')
 	const [formInstance] = Form.useForm();
 	const sendCode = useSendCode();
 
@@ -26,15 +28,15 @@ export const EnterEmail: FC<Props> = ({ afterSuccess }) => {
 	return (
 		<Form form={formInstance} layout="vertical" className={styles.email} onFinish={onFinish}>
 			<Item rules={[{ required: true, message: '' }]} name="username">
-				<Input placeholder="Логин" size="large" />
+				<Input placeholder={t('enterEmail.login')} size="large" />
 			</Item>
 			<Item rules={[{ required: true, message: '' }]} name="email">
-				<Input type="email" placeholder="Email" size="large" />
+				<Input type="email" placeholder={t('enterEmail.email')} size="large" />
 			</Item>
 			<Button size="large" loading={sendCode.isPending} type="primary" htmlType="submit">
-				Продолжить
+				{t('enterEmail.continue')}
 			</Button>
-			<Link to={rootPaths.AUTH.SIGN_IN}>Назад</Link>
+			<Link to={rootPaths.AUTH.SIGN_IN}>{t('enterEmail.back')}</Link>
 		</Form>
 	);
 };

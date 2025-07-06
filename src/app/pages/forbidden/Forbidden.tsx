@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next"
 import { Button } from "antd"
 import { useNavigate } from "react-router-dom"
 
@@ -12,6 +13,7 @@ import { LocalStorage } from "@utils/helpers/localStorage.ts"
 import styles from "./forbidden.module.scss"
 
 export const Forbidden = () => {
+  const { t } = useTranslation('app')
   const dispatch = useAppDispatch()
   const logout = useLogOut()
   const navigate = useNavigate()
@@ -33,11 +35,11 @@ export const Forbidden = () => {
   return (
     <div className={styles.forbidden}>
       <EmptyCrocodile
-        title='Нет доступа!'
-        description='У пользователя нет необходимых прав для доступа к запрашиваемой странице или ресурсу.'
+        title={t('forbidden.header')}
+        description={t('forbidden.description')}
         extra={
           <Button loading={logout.isPending} onClick={onLogout}>
-            Выйти
+            {t('forbidden.logout')}
           </Button>
         }
       />

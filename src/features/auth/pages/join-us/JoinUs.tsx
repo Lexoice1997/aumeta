@@ -1,14 +1,17 @@
+import { useTranslation } from "react-i18next"
+import { useNavigate } from "react-router-dom"
+
 import { ArrowRightIcon } from "@assets/icons/ArrowRightIcon"
 import { BriefCaseIcon } from "@assets/icons/BriefCaseIcon"
 import { UserIcon } from "@assets/icons/UserIcon"
 import { UserSearchIcon } from "@assets/icons/UserSearchIcon"
-
 import { rootPaths } from "@utils/constants/rootPaths"
-import { useNavigate } from "react-router-dom"
+
 import styles from "./joinUs.module.scss"
 
 export const JoinUsPage = () => {
   const navigate = useNavigate()
+  const { t } = useTranslation('auth')
 
   const onSignIn = () => {
     navigate(rootPaths.AUTH.SIGN_IN)
@@ -22,8 +25,8 @@ export const JoinUsPage = () => {
     <div className={styles.body}>
       <div className={styles.content}>
         <div className={styles.top}>
-          <h3>Join Us!</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+          <h3>{t('joinUs')}</h3>
+          <p>{t('placeholder')}</p>
         </div>
         <div className={styles.list}>
           <div className={styles.item} onClick={onSignUp}>
@@ -31,8 +34,8 @@ export const JoinUsPage = () => {
               <BriefCaseIcon />
             </div>
             <div className={styles.item__content}>
-              <h4>Company</h4>
-              <p>Own or belong to a company, this is for you.</p>
+              <h4>{t('accountTypes.company.title')}</h4>
+              <p>{t('accountTypes.company.description')}</p>
             </div>
             <div className={styles.arrow}>
               <ArrowRightIcon />
@@ -43,8 +46,8 @@ export const JoinUsPage = () => {
               <UserSearchIcon />
             </div>
             <div className={styles.item__content}>
-              <h4>HR</h4>
-              <p>Personal account to manage all you activities.</p>
+              <h4>{t('accountTypes.hr.title')}</h4>
+              <p>{t('accountTypes.hr.title')}.</p>
             </div>
             <div className={styles.arrow}>
               <ArrowRightIcon />
@@ -55,8 +58,8 @@ export const JoinUsPage = () => {
               <UserIcon />
             </div>
             <div className={styles.item__content}>
-              <h4>User</h4>
-              <p>Personal account to manage all you activities.</p>
+              <h4>{t('accountTypes.user.title')}</h4>
+              <p>{t('accountTypes.user.title')}</p>
             </div>
             <div className={styles.arrow}>
               <ArrowRightIcon />
@@ -64,7 +67,7 @@ export const JoinUsPage = () => {
           </div>
         </div>
         <div className={styles.bottom}>
-          Already have an account? <span onClick={onSignIn}>Sign In</span>
+          {t('signInPrompt')} <span onClick={onSignIn}>{t('singInLink')}</span>
         </div>
       </div>
     </div>

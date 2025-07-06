@@ -1,4 +1,5 @@
 import { Button, Form, Input } from "antd"
+import { useTranslation } from "react-i18next"
 import { Link, useNavigate } from "react-router-dom"
 
 import { useAppDispatch } from "@hooks/useRedux.ts"
@@ -13,6 +14,7 @@ import styles from "./signIn.module.scss"
 const { Item } = Form
 
 export const SignIn = () => {
+  const { t } = useTranslation('auth')
   const [formInstance] = Form.useForm()
   const navigate = useNavigate()
   const dispatch = useAppDispatch()
@@ -35,22 +37,22 @@ export const SignIn = () => {
       <div className={styles.header}></div>
       <div className={styles.body}>
         <div className={styles.body__title}>
-          <h1>Вход</h1>
-          <p>Добро пожаловать! Пожалуйста, введите ваши данные.</p>
+          <h1>{t('signInSection.header')}</h1>
+          <p>{t('signInSection.welcomeMessage')}</p>
         </div>
         <Form form={formInstance} layout='vertical' className={styles.body__form} onFinish={onFinish}>
-          <Item label='Логин' rules={[{ required: true, message: "" }]} name='email'>
+          <Item label={t('enterEmail.email')} rules={[{ required: true, message: "" }]} name='email'>
             <Input size='large' />
           </Item>
-          <Item label='Пароль' rules={[{ required: true, message: "" }]} name='password'>
+          <Item label={t('formFields.password')} rules={[{ required: true, message: "" }]} name='password'>
             <Input.Password size='large' />
           </Item>
-          <Link to={rootPaths.AUTH.RESET_PASSWORD}>Забыли пароль</Link>
+          <Link to={rootPaths.AUTH.RESET_PASSWORD}>{t('signInSection.forgotPassword')}</Link>
           <Button size='large' loading={signIn.isPending} type='primary' htmlType='submit'>
-            Вход
+            {t('signInSection.header')}
           </Button>
           <div className={styles.body__sign_up}>
-            Don’t have an account? <Link to={rootPaths.AUTH.SIGN_UP}>Create an account</Link>
+            {t('signInSection.noAccountPrompt')} <Link to={rootPaths.AUTH.SIGN_UP}>{t('signInSection.createAccount')}</Link>
           </div>
         </Form>
       </div>

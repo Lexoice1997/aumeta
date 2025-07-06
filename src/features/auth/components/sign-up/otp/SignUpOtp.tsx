@@ -1,6 +1,7 @@
 import { Button } from "antd"
 import { FC, useState } from "react"
 import OTPInput from "react-otp-input"
+import { useTranslation } from "react-i18next"
 
 import { useCheckVerifyEmailCode } from "../../../services/authMutations"
 import { ReSendCode } from "./ReSendCode"
@@ -13,6 +14,7 @@ type Props = {
 }
 
 export const SignUpVerifyCode: FC<Props> = ({ afterSuccess, email }) => {
+  const { t } = useTranslation('auth')
   const [code, setCode] = useState("")
   const checkCode = useCheckVerifyEmailCode()
 
@@ -36,7 +38,7 @@ export const SignUpVerifyCode: FC<Props> = ({ afterSuccess, email }) => {
       />
       <ReSendCode email={email} />
       <Button size='large' loading={checkCode.isPending} onClick={onVerifyCode} type='primary'>
-        Продолжить
+        {t('enterEmail.continue')}
       </Button>
     </div>
   )

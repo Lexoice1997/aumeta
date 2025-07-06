@@ -1,4 +1,5 @@
 import { Button } from "antd"
+import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 
 import { EmptyCrocodile } from "@components/empty-crocodile/EmptyCrocodile.tsx"
@@ -6,6 +7,7 @@ import { EmptyCrocodile } from "@components/empty-crocodile/EmptyCrocodile.tsx"
 import styles from "./notFound.module.scss"
 
 export const NotFound = () => {
+  const { t } = useTranslation('app')
   const navigate = useNavigate()
 
   const onBack = () => {
@@ -15,9 +17,9 @@ export const NotFound = () => {
   return (
     <div className={styles.not_found}>
       <EmptyCrocodile
-        title='Страница не найдено!'
-        description='Запрошенная страница могла быть перемещена в другое место на сайте или вообще удалена.'
-        extra={<Button onClick={onBack}>Назад</Button>}
+        title={t('notfound.header')}
+        description={t('notfound.description')}
+        extra={<Button onClick={onBack}>{t('back')}</Button>}
       />
     </div>
   )
