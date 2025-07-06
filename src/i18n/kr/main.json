@@ -1,86 +1,86 @@
 {
   "homePage": {
-    "headline": "Банкты бузбастан мыкты таланттарды жалдаңыз!",
-    "description": "Бул веб-портал бизнес менен фрилансерлерди байланыштырат, долбоорлорду жана жалдоо процессин жеңилдетет.",
+    "headline": "Нанимайте лучших специалистов без лишних затрат!",
+    "description": "Этот веб-портал помогает бизнесу и фрилансерам сотрудничать, упрощая проекты и процесс найма.",
     "actions": {
-      "postJob": "Жумуш жарыялоо",
-      "howToUse": "Кантип колдонуу керек?"
+      "postJob": "Разместить вакансию",
+      "howToUse": "Как использовать?"
     },
-    "postYourInformation": "Маалыматыңызды жарыялоо",
+    "postYourInformation": "Разместить информацию",
     "jobTypes": {
       "job": {
-        "title": "Жумуш",
-        "description": "Узак мөөнөттүү карьералык өсүү үчүн толук убакыттагы жумуш мүмкүнчүлүктөрү."
+        "title": "Работа",
+        "description": "Возможности полной занятости для долгосрочного карьерного роста."
       },
       "freelance": {
         "title": "Фриланс",
-        "description": "Келишимдик негиздеги ийкемдүү долбоордук жумуш."
+        "description": "Гибкая проектная работа на контрактной основе."
       },
       "oneTimeJob": {
-        "title": "Бир жолку жумуш",
-        "description": "Белгиленген аяктоо мөөнөтү менен жеке тапшырмалар же долбоорлор."
+        "title": "Разовая работа",
+        "description": "Единичные задачи или проекты с четким сроком выполнения."
       },
       "internship": {
         "title": "Стажировка",
-        "description": "Студенттер же жаңы баштагандар үчүн кесиптик тажрыйба алууга арналган убактылуу позициялар."
+        "description": "Временные позиции для получения профессионального опыта, идеально для студентов и начинающих специалистов."
       }
     },
     "templates": {
-      "templates": "Шаблондор",
-      "useThisTemplate": "Бул шаблонду колдонуу"
+      "templates": "Шаблоны",
+      "useThisTemplate": "Использовать этот шаблон"
     }
   },
   "homeModals": {
     "titles": {
-      "postJob": "Жумуш жарыялоо",
-      "postFreelance": "Фриланс жарыялоо",
-      "postOneTimeJob": "Бир жолку жумуш жарыялоо",
-      "postInternship": "Стажировка жарыялоо"
+      "postJob": "Разместить вакансию",
+      "postFreelance": "Разместить фриланс",
+      "postOneTimeJob": "Разместить разовую работу",
+      "postInternship": "Разместить стажировку"
     },
-    "description": "Вакансияны жөнөтүү үчүн, сураныч, форманы толтуруңуз",
+    "description": "Чтобы отправить вакансию, пожалуйста, заполните форму",
     "contactInformation": {
-      "country": "Өлкө",
-      "region": "Аймак",
-      "city": "Шаар",
-      "address": "Дарек",
-      "email": "Электрондук почта",
-      "organisation": "Уюм"
+      "country": "Страна",
+      "region": "Регион",
+      "city": "Город",
+      "address": "Адрес",
+      "email": "Электронная почта",
+      "organisation": "Организация"
     },
     "internshipInformation": {
-      "jobInformation": "Жумуш маалыматы",
-      "header": "Стажировка маалыматы",
-      "professionTitle": "Кесип аты",
-      "jobCategory": "Жумуш категориясы",
-      "industry": "Тармак",
-      "requirements": "Талаптар",
-      "obligations": "Милдеттер",
-      "companyName": "Компаниянын аты",
-      "jobDescription": "Жумуштун сүрөттөлүшү"
+      "jobInformation": "Информация о работе",
+      "header": "Информация о стажировке",
+      "professionTitle": "Название профессии",
+      "jobCategory": "Категория работы",
+      "industry": "Отрасль",
+      "requirements": "Требования",
+      "obligations": "Обязанности",
+      "companyName": "Название компании",
+      "jobDescription": "Описание работы"
     },
     "checkInformation": {
-      "header": "Маалыматты текшерүү",
-      "jobSummery": "Жумуштун кыскача сүрөттөлүшү",
-      "requirements": "Талаптар",
-      "obligations": "Милдеттер",
-      "industry": "Тармак",
-      "conditions": "Шарттар",
-      "contacts": "Байланыштар",
-      "phoneNumber": "Телефон номери"
+      "header": "Проверка информации",
+      "jobSummery": "Краткое описание работы",
+      "requirements": "Требования",
+      "obligations": "Обязанности",
+      "industry": "Отрасль",
+      "conditions": "Условия",
+      "contacts": "Контакты",
+      "phoneNumber": "Номер телефона"
     },
     "freelancerInformation": {
-      "header": "Фрилансер маалыматы",
-      "jobType": "Жумуш түрү",
-      "jobTime": "Жумуш убактысы",
-      "jobSalary": "Жумуш айлыгы",
-      "jobGraphic": "Жумуш графиги",
-      "hideSalary": "Айлыкты жашыруу?",
-      "jobSummery": "Жумуштун кыскача сүрөттөлүшү",
-      "deadline": "Мөөнөт",
-      "skillsAndExperience": "Көндүмдөр жана тажрыйба",
-      "assignments": "Тапшырмалар",
-      "supplement": "Кошумча",
-      "professionTitle": "Кесип аты",
-      "contacts": "Байланыштар"
+      "header": "Информация о фрилансе",
+      "jobType": "Тип работы",
+      "jobTime": "Время работы",
+      "jobSalary": "Зарплата",
+      "jobGraphic": "График работы",
+      "hideSalary": "Скрыть зарплату?",
+      "jobSummery": "Краткое описание работы",
+      "deadline": "Срок",
+      "skillsAndExperience": "Навыки и опыт",
+      "assignments": "Задания",
+      "supplement": "Дополнение",
+      "professionTitle": "Название профессии",
+      "contacts": "Контакты"
     }
   }
 }

@@ -10,17 +10,12 @@ import { PostFreelanceModal } from "./components/post-freelance/PostFreelance"
 import { PostInternshipModal } from "./components/post-internship/PostInternship"
 import { PostJobModal } from "./components/post-job/PostJobModal"
 import { PostOneTimeJobModal } from "./components/post-one-time-job/PostOneTimeJob"
-import {
-  setPostFreelanceModalData,
-  setPostInternshipModalData,
-  setPostModalData,
-  setPostOneTimeModalData,
-} from "./slices/mainSlice"
+import { setPostFreelanceModalData, setPostInternshipModalData, setPostModalData, setPostOneTimeModalData } from "./slices/mainSlice"
 
 import styles from "./index.module.scss"
 
 export const MainPage = () => {
-  const { t } = useTranslation('main')
+  const { t } = useTranslation("main")
 
   const dispatch = useAppDispatch()
 
@@ -28,7 +23,7 @@ export const MainPage = () => {
     dispatch(setPostModalData({ visible: true }))
   }
 
-  const onOpenFreelancetModal = () => {
+  const onOpenFreelanceModal = () => {
     dispatch(setPostFreelanceModalData({ visible: true }))
   }
 
@@ -44,13 +39,13 @@ export const MainPage = () => {
     <div className={styles.main}>
       <div className={styles.section_top}>
         <div className={styles.left}>
-          <h1>{t('homePage.headline')}</h1>
-          <p>
-            {t('homePage.description')}
-          </p>
+          <h1>{t("homePage.headline")}</h1>
+          <p>{t("homePage.description")}</p>
           <div className={styles.left__buttons}>
-            <Button type='primary'>{t('homePage.actions.postJob')}</Button>
-            <Button type='primary'>{t('homePage.actions.howToUse')}</Button>
+            <Button type='primary' onClick={onOpenPostModal}>
+              {t("homePage.actions.postJob")}
+            </Button>
+            <Button type='primary'>{t("homePage.actions.howToUse")}</Button>
           </div>
         </div>
         <div className={styles.right}>
@@ -58,46 +53,38 @@ export const MainPage = () => {
         </div>
       </div>
       <div className={styles.section_post}>
-        <h2>{t('homePage.postYourInformation')}</h2>
+        <h2>{t("homePage.postYourInformation")}</h2>
         <div className={styles.posts}>
           <div className={styles.post}>
             <JobIcon />
-            <h3>{t('homePage.jobTypes.job.title')}</h3>
-            <p>
-              {t('homePage.jobTypes.job.description')}
-            </p>
+            <h3>{t("homePage.jobTypes.job.title")}</h3>
+            <p>{t("homePage.jobTypes.job.description")}</p>
             <Button type='primary' onClick={onOpenPostModal}>
-              {t('homePage.templates.templates')} <SendIcon />
+              {t("homePage.templates.templates")} <SendIcon />
             </Button>
           </div>
           <div className={styles.post}>
             <FreelanceIcon />
-            <h3>{t('homePage.jobTypes.freelance.title')}</h3>
-            <p>
-              {t('homePage.jobTypes.freelance.description')}
-            </p>
-            <Button type='primary' onClick={onOpenFreelancetModal}>
-              {t('homePage.templates.templates')} <SendIcon />
+            <h3>{t("homePage.jobTypes.freelance.title")}</h3>
+            <p>{t("homePage.jobTypes.freelance.description")}</p>
+            <Button type='primary' onClick={onOpenFreelanceModal}>
+              {t("homePage.templates.templates")} <SendIcon />
             </Button>
           </div>
           <div className={styles.post}>
             <JobIcon />
-            <h3>{t('homePage.jobTypes.oneTimeJob.title')}</h3>
-            <p>
-              {t('homePage.jobTypes.oneTimeJob.description')}
-            </p>
+            <h3>{t("homePage.jobTypes.oneTimeJob.title")}</h3>
+            <p>{t("homePage.jobTypes.oneTimeJob.description")}</p>
             <Button type='primary' onClick={onOpenOneTimeModal}>
-              {t('homePage.templates.templates')} <SendIcon />
+              {t("homePage.templates.templates")} <SendIcon />
             </Button>
           </div>
           <div className={styles.post}>
             <FreelanceIcon />
-            <h3>{t('homePage.jobTypes.internship.title')}</h3>
-            <p>
-              {t('homePage.jobTypes.internship.description')}
-            </p>
+            <h3>{t("homePage.jobTypes.internship.title")}</h3>
+            <p>{t("homePage.jobTypes.internship.description")}</p>
             <Button type='primary' onClick={onOpenInternshipModal}>
-              {t('homePage.templates.templates')} <SendIcon />
+              {t("homePage.templates.templates")} <SendIcon />
             </Button>
           </div>
         </div>
