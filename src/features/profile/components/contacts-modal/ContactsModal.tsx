@@ -1,5 +1,5 @@
 import { Form, Input, Modal, Select } from "antd"
-import { useForm } from "antd/es/form/Form"
+import { useForm, useWatch } from "antd/es/form/Form"
 import { useAppDispatch, useAppSelector } from "@hooks/useRedux"
 import { setContactModalData } from "../../slices/profileSlice"
 import { useGetClientProfile } from "../../services/profileQueries"
@@ -14,8 +14,9 @@ export const ContactFormModal = () => {
   const [formInstance] = useForm()
   const dispatch = useAppDispatch()
   const { data } = useGetClientProfile()
-  const { data: regions, isLoading: loadingRegions } = useGetRegions()
+  const countryId = useWatch("countryId", formInstance)
   const { data: countries, isLoading: loadingCountries } = useGetCountries()
+  const { data: regions, isLoading: loadingRegions } = useGetRegions(countryId)
   const setClientContacts = useSetClientContacts()
   const { visible } = useAppSelector(state => state.profile.contactModalData)
 
@@ -118,7 +119,7 @@ export const ContactFormModal = () => {
               filterSort={(optionA, optionB) =>
                 (optionA?.label ?? "").toLowerCase().localeCompare((optionB?.label ?? "").toLowerCase())
               }
-              options={regions?.map((el) => ({ label: el?.name?.default?.toString(), value: el?.id }))}
+              options={regions?.map((el) => ({ label: el?.name?.ru?.toString(), value: el?.id }))}
             />
           </Form.Item>
           <Form.Item name='city' label={t('modalsForm.editContactInformation.city')} rules={[{ required: true, message: "" }]}>
