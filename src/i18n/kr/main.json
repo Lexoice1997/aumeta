@@ -1,0 +1,86 @@
+{
+  "homePage": {
+    "headline": "Банкты бузбастан мыкты таланттарды жалдаңыз!",
+    "description": "Бул веб-портал бизнес менен фрилансерлерди байланыштырат, долбоорлорду жана жалдоо процессин жеңилдетет.",
+    "actions": {
+      "postJob": "Жумуш жарыялоо",
+      "howToUse": "Кантип колдонуу керек?"
+    },
+    "postYourInformation": "Маалыматыңызды жарыялоо",
+    "jobTypes": {
+      "job": {
+        "title": "Жумуш",
+        "description": "Узак мөөнөттүү карьералык өсүү үчүн толук убакыттагы жумуш мүмкүнчүлүктөрү."
+      },
+      "freelance": {
+        "title": "Фриланс",
+        "description": "Келишимдик негиздеги ийкемдүү долбоордук жумуш."
+      },
+      "oneTimeJob": {
+        "title": "Бир жолку жумуш",
+        "description": "Белгиленген аяктоо мөөнөтү менен жеке тапшырмалар же долбоорлор."
+      },
+      "internship": {
+        "title": "Стажировка",
+        "description": "Студенттер же жаңы баштагандар үчүн кесиптик тажрыйба алууга арналган убактылуу позициялар."
+      }
+    },
+    "templates": {
+      "templates": "Шаблондор",
+      "useThisTemplate": "Бул шаблонду колдонуу"
+    }
+  },
+  "homeModals": {
+    "titles": {
+      "postJob": "Жумуш жарыялоо",
+      "postFreelance": "Фриланс жарыялоо",
+      "postOneTimeJob": "Бир жолку жумуш жарыялоо",
+      "postInternship": "Стажировка жарыялоо"
+    },
+    "description": "Вакансияны жөнөтүү үчүн, сураныч, форманы толтуруңуз",
+    "contactInformation": {
+      "country": "Өлкө",
+      "region": "Аймак",
+      "city": "Шаар",
+      "address": "Дарек",
+      "email": "Электрондук почта",
+      "organisation": "Уюм"
+    },
+    "internshipInformation": {
+      "jobInformation": "Жумуш маалыматы",
+      "header": "Стажировка маалыматы",
+      "professionTitle": "Кесип аты",
+      "jobCategory": "Жумуш категориясы",
+      "industry": "Тармак",
+      "requirements": "Талаптар",
+      "obligations": "Милдеттер",
+      "companyName": "Компаниянын аты",
+      "jobDescription": "Жумуштун сүрөттөлүшү"
+    },
+    "checkInformation": {
+      "header": "Маалыматты текшерүү",
+      "jobSummery": "Жумуштун кыскача сүрөттөлүшү",
+      "requirements": "Талаптар",
+      "obligations": "Милдеттер",
+      "industry": "Тармак",
+      "conditions": "Шарттар",
+      "contacts": "Байланыштар",
+      "phoneNumber": "Телефон номери"
+    },
+    "freelancerInformation": {
+      "header": "Фрилансер маалыматы",
+      "jobType": "Жумуш түрү",
+      "jobTime": "Жумуш убактысы",
+      "jobSalary": "Жумуш айлыгы",
+      "jobGraphic": "Жумуш графиги",
+      "hideSalary": "Айлыкты жашыруу?",
+      "jobSummery": "Жумуштун кыскача сүрөттөлүшү",
+      "deadline": "Мөөнөт",
+      "skillsAndExperience": "Көндүмдөр жана тажрыйба",
+      "assignments": "Тапшырмалар",
+      "supplement": "Кошумча",
+      "professionTitle": "Кесип аты",
+      "contacts": "Байланыштар"
+    }
+  }
+}

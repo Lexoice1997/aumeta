@@ -1,5 +1,6 @@
 import { Button, Form, Input } from "antd"
 import { Link } from "react-router-dom"
+import { useTranslation } from "react-i18next"
 
 import { rootPaths } from "@utils/constants/rootPaths"
 import { useCheckEmail } from "../../../services/authMutations"
@@ -13,6 +14,7 @@ type Props = {
 }
 
 export const SignUpEmail = ({ afterSuccess }: Props) => {
+  const { t } = useTranslation('auth')
   const [formInstance] = useForm()
   const checkEmail = useCheckEmail()
 
@@ -25,21 +27,20 @@ export const SignUpEmail = ({ afterSuccess }: Props) => {
   return (
     <div className={styles.body}>
       <div className={styles.body__title}>
-        <h1>Create an account or sing in</h1>
+        <h1>{t('authHeadline')}</h1>
         <p>
-          By creating an account or singing in, you understand and agree to Aumeta’s Terms. You also
-          acknowledge our Cookie and Privacy policies.{" "}
+          {t('agreement')}{" "}
         </p>
       </div>
       <Form form={formInstance} layout='vertical' className={styles.body__form} onFinish={onFinish}>
-        <Item label='Email address' rules={[{ required: true, message: "" }]} name='email'>
+        <Item label={t('enterEmail.email')} rules={[{ required: true, message: "" }]} name='email'>
           <Input size='large' placeholder='Email' type='email' />
         </Item>
         <Button size='large' loading={checkEmail.isPending} type='primary' htmlType='submit'>
-          Continue
+          {t('enterEmail.continue')}
         </Button>
         <div className={styles.body__sign_up}>
-          Already have an account? <Link to={rootPaths.AUTH.SIGN_IN}>Sing in</Link>
+          {t('signInPrompt')} <Link to={rootPaths.AUTH.SIGN_IN}>{t('singInLink')}</Link>
         </div>
       </Form>
     </div>

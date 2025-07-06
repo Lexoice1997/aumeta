@@ -1,5 +1,6 @@
 import { Button, Form, Input } from 'antd';
 import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { useResetPassword } from '../../services/authMutations';
 
@@ -11,6 +12,8 @@ type Props = {
 };
 
 export const NewPassword: FC<Props> = ({ username, afterSuccess }) => {
+  const { t } = useTranslation('auth')
+  const { t: appT } = useTranslation('app')
   const resetPassword = useResetPassword();
 
   const onFinish = (fields: { password: string; confirm: string }) => {
@@ -37,7 +40,7 @@ export const NewPassword: FC<Props> = ({ username, afterSuccess }) => {
         ]}
         hasFeedback
       >
-        <Input.Password placeholder="Введите новый пароль" size="large" />
+        <Input.Password placeholder={t('resetForm.enterNewPassword')} size="large" />
       </Form.Item>
       <Form.Item
         name="confirm"
@@ -58,7 +61,7 @@ export const NewPassword: FC<Props> = ({ username, afterSuccess }) => {
           }),
         ]}
       >
-        <Input.Password placeholder="Повторите новый пароль" size="large" />
+        <Input.Password placeholder={t('resetForm.repeatNewPassword')} size="large" />
       </Form.Item>
       <Button
         size="large"
@@ -66,7 +69,7 @@ export const NewPassword: FC<Props> = ({ username, afterSuccess }) => {
         type="primary"
         htmlType="submit"
       >
-        Сохранить
+        {appT('save')}
       </Button>
     </Form>
   );

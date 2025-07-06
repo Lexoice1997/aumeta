@@ -1,0 +1,38 @@
+{
+  "profilePage": {
+    "industry": "Отрасль",
+    "services": "Услуги",
+    "servicesEmpty": "Услуги не найдено",
+    "recentlyPost": "Недавно опубликовано",
+    "postsEmpty": "Посты не найдено",
+    "information": "Информация",
+    "personals": "{{size}} сотрудников",
+    "contacts": "Контакты"
+  },
+  "modalsForm": {
+    "editProfile": {
+      "title": "Редактировать профиль",
+      "companyLogo": "Логотип компании",
+      "upload": "Загрузить",
+      "companyName": "Название компании",
+      "industry": "Отрасль",
+      "service": "Услуга"
+    },
+    "editInformations": {
+      "title": "Редактировать информацию",
+      "workingHours": "Часы работы",
+      "companySize": "Размер компании",
+      "information": "Информация"
+    },
+    "editContactInformation": {
+      "title": "Редактировать контактную информацию",
+      "phone": "Телефон",
+      "email": "Электронная почта",
+      "website": "Веб-сайт",
+      "country": "Страна",
+      "region": "Регион",
+      "city": "Город",
+      "address": "Адрес"
+    }
+  }
+}

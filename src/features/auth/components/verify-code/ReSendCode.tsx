@@ -4,12 +4,14 @@ import { FC, useEffect, useRef, useState } from 'react';
 import { useReSendCode } from '../../services/authMutations';
 
 import styles from '../../pages/reset-password/resetPassword.module.scss';
+import { useTranslation } from 'react-i18next';
 
 type Props = {
   username: string;
 };
 
 export const ReSendCode: FC<Props> = ({ username }) => {
+  const { t } = useTranslation('auth')
   const [timer, setTimer] = useState(59);
   const ref = useRef<number>(0);
   const sendCode = useReSendCode();
@@ -47,12 +49,12 @@ export const ReSendCode: FC<Props> = ({ username }) => {
     <div className={styles.resend}>
       {timer ? (
         <p>
-          Повторное отправка смс через{' '}
+          {t('resetForm.resendSmsAfter')}{' '}
           <span>00:{timer < 10 ? `0${timer}` : timer}</span>
         </p>
       ) : (
         <Button loading={sendCode.isPending} type="link" onClick={onReSendCode}>
-          Повторное отправка смс через
+          {t('resetForm.resendSmsAfter')}
         </Button>
       )}
     </div>

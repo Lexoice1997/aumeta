@@ -1,0 +1,38 @@
+{
+  "profilePage": {
+    "industry": "Industry",
+    "services": "Services",
+    "servicesEmpty": "Services not yet",
+    "recentlyPost": "Recently post",
+    "postsEmpty": "Posts not yet",
+    "information": "Information",
+    "personals": "{{size}} personals",
+    "contacts": "Contacts"
+  },
+  "modalsForm": {
+    "editProfile": {
+      "title": "Edit Profile",
+      "companyLogo": "Company Logo",
+      "upload": "Upload",
+      "companyName": "Company Name",
+      "industry": "Industry",
+      "service": "Service"
+    },
+    "editInformations": {
+      "title": "Edit Informations",
+      "workingHours": "Working Hours",
+      "companySize": "Company Size",
+      "information": "Information"
+    },
+    "editContactInformation": {
+      "title": "Edit Contact Information",
+      "phone": "Phone",
+      "email": "Email",
+      "website": "Website",
+      "country": "Country",
+      "region": "Region",
+      "city": "City",
+      "address": "Address"
+    }
+  }
+}

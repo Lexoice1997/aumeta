@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next"
 import { Button, Form, Input, Select } from "antd"
 import { useNavigate } from "react-router-dom"
 
@@ -17,6 +18,7 @@ type Props = {
 }
 
 export const SignUpForm = ({ email }: Props) => {
+  const { t } = useTranslation('auth')
   const navigate = useNavigate()
   const [formInstance] = useForm()
   const { data: industries, isLoading: loadingIndustries } = useGetPublicIndustries()
@@ -38,10 +40,10 @@ export const SignUpForm = ({ email }: Props) => {
 
   return (
     <Form form={formInstance} layout='vertical' onFinish={onFinish} className={styles.form}>
-      <Item name='name' label='Name organisation' rules={[{ required: true, message: "" }]}>
+      <Item name='name' label={t('formFields.nameOrganisation')} rules={[{ required: true, message: "" }]}>
         <Input />
       </Item>
-      <Item name='industryId' label='Industry' rules={[{ required: true, message: "" }]}>
+      <Item name='industryId' label={t('formFields.industry')} rules={[{ required: true, message: "" }]}>
         <Select suffixIcon={<SelectSuffix isLoading={loadingIndustries} />}>
           {industries?.data?.map((item) => (
             <Option key={item.id} value={item.id}>
@@ -50,7 +52,7 @@ export const SignUpForm = ({ email }: Props) => {
           ))}
         </Select>
       </Item>
-      <Item name='countryId' label='Country' rules={[{ required: true, message: "" }]}>
+      <Item name='countryId' label={t('formFields.country')} rules={[{ required: true, message: "" }]}>
         <Select
           suffixIcon={<SelectSuffix isLoading={loadingCountries} />}
           showSearch
@@ -61,7 +63,7 @@ export const SignUpForm = ({ email }: Props) => {
           options={countries?.map((el) => ({ label: el?.name?.default?.toString(), value: el?.id }))}
         />
       </Item>
-      <Item name='regionId' label='Region' rules={[{ required: true, message: "" }]}>
+      <Item name='regionId' label={t('formFields.region')} rules={[{ required: true, message: "" }]}>
         <Select
           suffixIcon={<SelectSuffix isLoading={loadingRegions} />}
           showSearch
@@ -71,13 +73,13 @@ export const SignUpForm = ({ email }: Props) => {
           options={regions?.map((el) => ({ label: el?.name?.default?.toString(), value: el?.id }))}
         />
       </Item>
-      <Item name='city' label='City' rules={[{ required: true, message: "" }]}>
+      <Item name='city' label={t('formFields.city')} rules={[{ required: true, message: "" }]}>
         <Input />
       </Item>
-      <Item name='address' label='Address' rules={[{ required: true, message: "" }]}>
+      <Item name='address' label={t('formFields.address')} rules={[{ required: true, message: "" }]}>
         <Input />
       </Item>
-      <Item name='timezone' label='Timezone' rules={[{ required: true, message: "" }]}>
+      <Item name='timezone' label={t('formFields.timezone')} rules={[{ required: true, message: "" }]}>
         <Select
           suffixIcon={<SelectSuffix isLoading={loadingTimeZones} />}
           filterSort={(optionA, optionB) =>
@@ -86,11 +88,11 @@ export const SignUpForm = ({ email }: Props) => {
           options={timeZones?.map((el) => ({ label: el?.toString(), value: el }))}
         />
       </Item>
-      <Item name='password' label='Password' rules={[{ required: true, message: "" }]}>
+      <Item name='password' label={t('formFields.password')} rules={[{ required: true, message: "" }]}>
         <Input.Password />
       </Item>
       <Button size='large' loading={signUp.isPending} onClick={onOk} type='primary' className={styles.submit}>
-        Зарегестрироватся
+        {t('registerButton')}
       </Button>
     </Form>
   )

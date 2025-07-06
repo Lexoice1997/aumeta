@@ -1,0 +1,86 @@
+{
+  "homePage": {
+    "headline": "Нанимайте лучших специалистов без лишних затрат!",
+    "description": "Этот веб-портал помогает бизнесу и фрилансерам сотрудничать, упрощая проекты и процесс найма.",
+    "actions": {
+      "postJob": "Разместить вакансию",
+      "howToUse": "Как использовать?"
+    },
+    "postYourInformation": "Разместить информацию",
+    "jobTypes": {
+      "job": {
+        "title": "Работа",
+        "description": "Возможности полной занятости для долгосрочного карьерного роста."
+      },
+      "freelance": {
+        "title": "Фриланс",
+        "description": "Гибкая проектная работа на контрактной основе."
+      },
+      "oneTimeJob": {
+        "title": "Разовая работа",
+        "description": "Единичные задачи или проекты с четким сроком выполнения."
+      },
+      "internship": {
+        "title": "Стажировка",
+        "description": "Временные позиции для получения профессионального опыта, идеально для студентов и начинающих специалистов."
+      }
+    },
+    "templates": {
+      "templates": "Шаблоны",
+      "useThisTemplate": "Использовать этот шаблон"
+    }
+  },
+  "homeModals": {
+    "titles": {
+      "postJob": "Разместить вакансию",
+      "postFreelance": "Разместить фриланс",
+      "postOneTimeJob": "Разместить разовую работу",
+      "postInternship": "Разместить стажировку"
+    },
+    "description": "Чтобы отправить вакансию, пожалуйста, заполните форму",
+    "contactInformation": {
+      "country": "Страна",
+      "region": "Регион",
+      "city": "Город",
+      "address": "Адрес",
+      "email": "Электронная почта",
+      "organisation": "Организация"
+    },
+    "internshipInformation": {
+      "jobInformation": "Информация о работе",
+      "header": "Информация о стажировке",
+      "professionTitle": "Название профессии",
+      "jobCategory": "Категория работы",
+      "industry": "Отрасль",
+      "requirements": "Требования",
+      "obligations": "Обязанности",
+      "companyName": "Название компании",
+      "jobDescription": "Описание работы"
+    },
+    "checkInformation": {
+      "header": "Проверка информации",
+      "jobSummery": "Краткое описание работы",
+      "requirements": "Требования",
+      "obligations": "Обязанности",
+      "industry": "Отрасль",
+      "conditions": "Условия",
+      "contacts": "Контакты",
+      "phoneNumber": "Номер телефона"
+    },
+    "freelancerInformation": {
+      "header": "Информация о фрилансе",
+      "jobType": "Тип работы",
+      "jobTime": "Время работы",
+      "jobSalary": "Зарплата",
+      "jobGraphic": "График работы",
+      "hideSalary": "Скрыть зарплату?",
+      "jobSummery": "Краткое описание работы",
+      "deadline": "Срок",
+      "skillsAndExperience": "Навыки и опыт",
+      "assignments": "Задания",
+      "supplement": "Дополнение",
+      "professionTitle": "Название профессии",
+      "contacts": "Контакты"
+    }
+  }
+}

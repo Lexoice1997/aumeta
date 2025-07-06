@@ -1,0 +1,38 @@
+{
+  "profilePage": {
+    "industry": "Sanoat",
+    "services": "Xizmatlar",
+    "recentlyPost": "Yaqinda joylashtirilgan",
+    "postsEmpty": "Postlar mavjud emas",
+    "servicesEmpty": "Xizmatlar mavjud emas",
+    "information": "Ma'lumot",
+    "personals": "{{size}} shaxslar",
+    "contacts": "Aloqalar"
+  },
+  "modalsForm": {
+    "editProfile": {
+      "title": "Profilni tahrirlash",
+      "companyLogo": "Kompaniya logotipi",
+      "upload": "Yuklash",
+      "companyName": "Kompaniya nomi",
+      "industry": "Sanoat",
+      "service": "Xizmat"
+    },
+    "editInformations": {
+      "title": "Ma'lumotlarni tahrirlash",
+      "workingHours": "Ish soatlari",
+      "companySize": "Kompaniya hajmi",
+      "information": "Ma'lumot"
+    },
+    "editContactInformation": {
+      "title": "Aloqa ma'lumotlarini tahrirlash",
+      "phone": "Telefon",
+      "email": "Elektron pochta",
+      "website": "Veb-sayt",
+      "country": "Davlat",
+      "region": "Viloyat",
+      "city": "Shahar",
+      "address": "Manzil"
+    }
+  }
+}
