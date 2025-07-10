@@ -48,7 +48,7 @@ export const PostFreelanceModal = () => {
 
     return create.mutateAsync({
       ...obj,
-      workModeType: workModeTypeEnums.JOB,
+      workModeType: workModeTypeEnums.FREELANCE,
       jobCategoryId: 1,
       jobTime: dayjs(obj?.jobTime).format(dayjsFormats.DATE),
     })
