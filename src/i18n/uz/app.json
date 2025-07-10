@@ -14,6 +14,8 @@
   "date": "Sana",
   "time": "Vaqt",
   "previous": "Oldingi",
+  "profile": "Profil",
+  "logout": "Chiqish",
   "footer": {
     "description": "Ushbu xizmat veb-portali korxonalarni frilanserlar bilan bog'laydi, loyiha hamkorligi va yollashni osonlashtiradi",
     "quickLink": {

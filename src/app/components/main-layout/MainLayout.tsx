@@ -14,20 +14,46 @@ import { useGetClientProfile } from "../../../features/profile/services/profileQ
 import { Languages } from '@utils/constants/menuLanguages'
 import { languages } from "@utils/enums/languages"
 import { useAppDispatch, useAppSelector } from "@hooks/useRedux"
-import { setLanguage } from "@slices/appSlice"
+import { setLanguage, setSidebar } from "@slices/appSlice"
 import { imgSrc } from "@utils/helpers/getSrc"
 import { LogoIcon } from "@assets/icons/LogoIcon"
 import { MenuIcon } from "@assets/icons/MenuIcon"
+import { useLogOut } from "@services/appMutations"
 
 import styles from "./mainLayout.module.scss"
+import { LocalStorage } from "@utils/helpers/localStorage"
+import { setIsAuth } from "@slices/userSlice"
+import { UserIcon } from "@assets/icons/UserIcon"
+import { LogOutIcon } from "@assets/icons/LogOutIcon"
 
 export const MainLayout = () => {
   const { t } = useTranslation('app')
   const navigate = useNavigate()
 	const dispatch = useAppDispatch();
+  const logout = useLogOut()
   const [menuOpen, setMenuOpen] = useState(false)
   const language = useAppSelector(state => state.app.language)
   const { data, isLoading, isError } = useGetClientProfile()
+
+  const onChangeLanguage = (lang: languages) => {
+		dispatch(setLanguage(lang));
+		i18next.changeLanguage(lang);
+		window.location.reload();
+	};
+
+  const onLogout = () => {
+    logout.mutateAsync().then(() => {
+      dispatch(setIsAuth(false))
+      dispatch(
+        setSidebar({
+          collapsed: false,
+          collapsible: true,
+        })
+      )
+      LocalStorage.clear()
+      navigate(rootPaths.AUTH.INDEX)
+    })
+  }
 
   const items: MenuProps["items"] = Object.keys(Languages).map(lang => ({
     key: lang,
@@ -39,11 +65,16 @@ export const MainLayout = () => {
     onClick: () => onChangeLanguage(lang as languages)
   }))
 
-  const onChangeLanguage = (lang: languages) => {
-		dispatch(setLanguage(lang));
-		i18next.changeLanguage(lang);
-		window.location.reload();
-	};
+  const profileDropdownItems: MenuProps["items"] = [
+    { key: 'profile', label: (<div className={styles.dropdown__item}>
+        <UserIcon color="var(--gray-900)" />
+        {t('profile')}
+      </div>), onClick: () => navigate(rootPaths.PROFILE.INDEX) },
+    { key: 'logout', label: (<div className={styles.dropdown__item}>
+      <LogOutIcon color="var(--gray-900)" />
+      {t('logout')}
+    </div>), onClick: onLogout },
+  ] 
 
   return (
     <div className={styles.main}>
@@ -64,15 +95,17 @@ export const MainLayout = () => {
                 {Languages[language].icon}{" "}<span className={styles.md_hidden}>{Languages[language].title}</span>
               </div>
             </Dropdown>
-            {!isLoading && !isError && <div onClick={() => navigate(rootPaths.PROFILE.INDEX)} className={styles.profile}>
-              <div className={clsx(styles.profile__left, styles.md_hidden)}>
-                <h3>{data?.name}</h3>
-                <p>{t('navbar.hrCompany')}</p>
-              </div>
-              <Avatar src={data?.avatar ? imgSrc(data.avatar.absolutePath) : null} style={{ backgroundColor: "#d9d9d9", verticalAlign: "middle" }} size='large'>
-                {String(data?.name[0]).toUpperCase()}
-              </Avatar>
-            </div>}
+            {!isLoading && !isError && <Dropdown menu={{ items: profileDropdownItems }}>
+                <div className={styles.profile}>
+                  <div className={clsx(styles.profile__left, styles.md_hidden)}>
+                    <h3>{data?.name}</h3>
+                    <p>{t('navbar.hrCompany')}</p>
+                  </div>
+                  <Avatar src={data?.avatar ? imgSrc(data.avatar.absolutePath) : null} style={{ backgroundColor: "#d9d9d9", verticalAlign: "middle" }} size='large'>
+                    {String(data?.name[0]).toUpperCase()}
+                  </Avatar>
+                </div>
+              </Dropdown>}
             <Button onClick={() => setMenuOpen(true)} className={styles.md_visible} type="text" shape="circle">
               <MenuIcon />
             </Button>

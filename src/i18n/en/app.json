@@ -14,6 +14,8 @@
   "date": "Date",
   "time": "Time",
   "previous": "Previous",
+  "profile": "Profile",
+  "logout": "Log out",
   "footer": {
     "description": "This service web portal connects businesses with freelancers, facilitating project collaboration and hiring",
     "quickLink": {
