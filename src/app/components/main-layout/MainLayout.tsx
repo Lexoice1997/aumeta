@@ -19,21 +19,23 @@ import { imgSrc } from "@utils/helpers/getSrc"
 import { LogoIcon } from "@assets/icons/LogoIcon"
 import { MenuIcon } from "@assets/icons/MenuIcon"
 import { useLogOut } from "@services/appMutations"
-
-import styles from "./mainLayout.module.scss"
 import { LocalStorage } from "@utils/helpers/localStorage"
 import { setIsAuth } from "@slices/userSlice"
 import { UserIcon } from "@assets/icons/UserIcon"
 import { LogOutIcon } from "@assets/icons/LogOutIcon"
 
+import styles from "./mainLayout.module.scss"
+
 export const MainLayout = () => {
   const { t } = useTranslation('app')
+  const { t: authT } = useTranslation('auth')
   const navigate = useNavigate()
 	const dispatch = useAppDispatch();
   const logout = useLogOut()
   const [menuOpen, setMenuOpen] = useState(false)
   const language = useAppSelector(state => state.app.language)
-  const { data, isLoading, isError } = useGetClientProfile()
+  const { isAuth } = useAppSelector(state => state.user)
+  const { data, isLoading, isError } = useGetClientProfile(isAuth)
 
   const onChangeLanguage = (lang: languages) => {
 		dispatch(setLanguage(lang));
@@ -51,8 +53,12 @@ export const MainLayout = () => {
         })
       )
       LocalStorage.clear()
-      navigate(rootPaths.AUTH.INDEX)
+      navigateToAuth()
     })
+  }
+
+  const navigateToAuth = () => {
+    navigate(rootPaths.AUTH.INDEX)
   }
 
   const items: MenuProps["items"] = Object.keys(Languages).map(lang => ({
@@ -95,7 +101,8 @@ export const MainLayout = () => {
                 {Languages[language].icon}{" "}<span className={styles.md_hidden}>{Languages[language].title}</span>
               </div>
             </Dropdown>
-            {!isLoading && !isError && <Dropdown menu={{ items: profileDropdownItems }}>
+            {
+              isAuth ? (!isLoading && !isError) && <Dropdown menu={{ items: profileDropdownItems }}>
                 <div className={styles.profile}>
                   <div className={clsx(styles.profile__left, styles.md_hidden)}>
                     <h3>{data?.name}</h3>
@@ -105,7 +112,9 @@ export const MainLayout = () => {
                     {String(data?.name[0]).toUpperCase()}
                   </Avatar>
                 </div>
-              </Dropdown>}
+              </Dropdown>:
+              <Button type="primary" onClick={navigateToAuth}>{authT('registerButton')}</Button>
+            }
             <Button onClick={() => setMenuOpen(true)} className={styles.md_visible} type="text" shape="circle">
               <MenuIcon />
             </Button>

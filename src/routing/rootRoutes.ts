@@ -16,10 +16,6 @@ import { ProfilePage } from '../features/profile/Index'
 
 export const mainRoutes: RouteModel[] = [
   {
-    path: rootPaths.MAIN.INDEX,
-    element: MainPage,
-  },
-  {
     path: rootPaths.PROFILE.INDEX,
     element: ProfilePage,
   },
@@ -29,6 +25,15 @@ export const rootRoutes: RouteModel[] = [
   {
     path: ROOT_INDEX,
     element: Redirect,
+  },
+  {
+    element: MainLayout,
+    children: [
+      {
+        path: rootPaths.MAIN.INDEX,
+        element: MainPage,
+      },
+    ],
   },
   {
     element: CheckAuth,

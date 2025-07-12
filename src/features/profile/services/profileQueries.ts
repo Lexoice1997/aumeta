@@ -7,12 +7,13 @@ import { ClientModel } from '../utils/models/clientModel'
 import { IndustryModel } from '@utils/models/industryModel'
 import { WorkModelReqModel } from 'src/features/main/utils/models/workModelReqModel'
 
-export const useGetClientProfile = () => useQuery<ClientModel>({
+export const useGetClientProfile = (enabled: boolean = true) => useQuery<ClientModel>({
   queryKey: [profileQueryKeys.CLIENT_PROFILE],
   queryFn: async () => {
     const { data } = await $api.get<SuccessRes<ClientModel>>(profileEndpoints.CLIENT_PROFILE)
     return data.data
-  }
+  },
+  enabled
 })
 
 export const useGetClientCompanySize = () => useQuery<ClientModel['companySize'][]>({
