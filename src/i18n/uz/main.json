@@ -1,86 +1,131 @@
 {
-  "homePage": {
-    "headline": "Eng yaxshi iste'dodlarni bankni buzmasdan yollang!",
-    "description": "Bu veb-portal biznes va frilanserlar o'rtasida hamkorlikni osonlashtiradi, loyihalar va yollash jarayonlarini soddalashtiradi.",
-    "actions": {
-      "postJob": "Ish joylashtirish",
-      "howToUse": "Qanday foydalanish?"
-    },
-    "postYourInformation": "Ma'lumotlaringizni joylashtirish",
-    "jobTypes": {
-      "job": {
-        "title": "Ish",
-        "description": "Uzoq muddatli martaba o'sishi uchun to'liq stavkali ish imkoniyatlari."
-      },
-      "freelance": {
-        "title": "Frilans",
-        "description": "Shartnoma asosida moslashuvchan loyiha ishlari."
-      },
-      "oneTimeJob": {
-        "title": "Bir martalik ish",
-        "description": "Belgilangan tugatish muddati bilan yagona vazifalar yoki loyihalar."
-      },
-      "internship": {
-        "title": "Amaliyot",
-        "description": "Talabalar yoki yangi boshlovchilar uchun professional tajriba olish uchun vaqtinchalik lavozimlar."
-      }
-    },
-    "templates": {
-      "templates": "Shablonlar",
-      "useThisTemplate": "Ushbu shablonni ishlatish"
-    }
-  },
-  "homeModals": {
-    "titles": {
-      "postJob": "Ish joylashtirish",
-      "postFreelance": "Frilans joylashtirish",
-      "postOneTimeJob": "Bir martalik ish joylashtirish",
-      "postInternship": "Amaliyot joylashtirish"
-    },
-    "description": "Vakansiyani yuborish uchun iltimos, formani to'ldiring",
-    "contactInformation": {
-      "country": "Davlat",
-      "region": "Viloyat",
-      "city": "Shahar",
-      "address": "Manzil",
-      "email": "Elektron pochta",
-      "organisation": "Tashkilot"
-    },
-    "internshipInformation": {
-      "jobInformation": "Ish ma'lumotlari",
-      "header": "Amaliyot ma'lumotlari",
-      "professionTitle": "Kasb nomi",
-      "jobCategory": "Ish kategoriyasi",
-      "industry": "Sanoat",
-      "requirements": "Talablar",
-      "obligations": "Majburiyatlar",
-      "companyName": "Kompaniya nomi",
-      "jobDescription": "Ish tavsifi"
-    },
-    "checkInformation": {
-      "header": "Ma'lumotlarni tekshirish",
-      "jobSummery": "Ish xulosasi",
-      "requirements": "Talablar",
-      "obligations": "Majburiyatlar",
-      "industry": "Sanoat",
-      "conditions": "Shartlar",
-      "contacts": "Aloqalar",
-      "phoneNumber": "Telefon raqami"
-    },
-    "freelancerInformation": {
-      "header": "Frilanser ma'lumotlari",
-      "jobType": "Ish turi",
-      "jobTime": "Ish vaqti",
-      "jobSalary": "Ish maoshi",
-      "jobGraphic": "Ish grafikasi",
-      "hideSalary": "Maoshni yashirish?",
-      "jobSummery": "Ish xulosasi",
-      "deadline": "Muddat",
-      "skillsAndExperience": "Ko'nikmalar va tajriba",
-      "assignments": "Topshiriqlar",
-      "supplement": "Qo'shimcha",
-      "professionTitle": "Kasb nomi",
-      "contacts": "Aloqalar"
-    }
-  }
+	"homePage": {
+		"headline": "Eng yaxshi iste'dodlarni bankni buzmasdan yollang!",
+		"purpose": "Aumeta — Butun dunyo \n iqtidorlari imkoniyat bilan uchrashadigan joy",
+		"description": "Bu veb-portal biznes va frilanserlar o'rtasida hamkorlikni osonlashtiradi, loyihalar va yollash jarayonlarini soddalashtiradi.",
+		"actions": {
+			"postJob": "Ish joylashtirish",
+			"howToUse": "Qanday foydalanish?"
+		},
+		"postYourInformation": "Ma'lumotlaringizni joylashtirish",
+		"jobTypes": {
+			"job": {
+				"title": "Ish",
+				"description": "Uzoq muddatli martaba o'sishi uchun to'liq stavkali ish imkoniyatlari."
+			},
+			"freelance": {
+				"title": "Frilans",
+				"description": "Shartnoma asosida moslashuvchan loyiha ishlari."
+			},
+			"oneTimeJob": {
+				"title": "Bir martalik ish",
+				"description": "Belgilangan tugatish muddati bilan yagona vazifalar yoki loyihalar."
+			},
+			"internship": {
+				"title": "Amaliyot",
+				"description": "Talabalar yoki yangi boshlovchilar uchun professional tajriba olish uchun vaqtinchalik lavozimlar."
+			}
+		},
+		"templates": {
+			"templates": "Shablonlar",
+			"useThisTemplate": "Ushbu shablonni ishlatish"
+		},
+		"statistics": {
+			"country": "Mamlakat",
+			"companies": "Kompaniyalar",
+			"candidates": "Nomzodlar",
+			"newJobs": "Yangi ish o‘rinlari"
+		},
+		"aboutUs": {
+			"title": "Aumeta nima?",
+			"text": "Aumeta shunchaki platforma emas. Bu — iqtidorli odamlar imkoniyatlar bilan uchrashadigan makon. Biz bizneslarga rivojlanishga, odamlarni esa o‘zlarini ro‘yobga chiqarishga yordam beramiz. Ushbu veb-portal kompaniyalarni freelancerlar bilan bog‘laydi, loyiha asosida hamkorlik va ishga olish jarayonini osonlashtiradi."
+		},
+		"infoHowToUse": {
+			"title": "Qanday foydalanish haqida ma'lumot",
+			"step": "Qadam",
+			"firstStep": {
+				"cards": {
+					"company": {
+						"title ": "Kompaniya",
+						"text": "Agar siz kompaniya egasi yoki xodimi bo‘lsangiz — bu siz uchun."
+					},
+					"hr": {
+						"title": "HR",
+						"text": "Barcha faoliyatingizni boshqarish uchun shaxsiy kabinet."
+					},
+					"oneTimeJob": {
+						"title": "Bir martalik ish",
+						"text": "Barcha faoliyatingizni boshqarish uchun shaxsiy kabinet."
+					}
+				},
+				"signUp": "Ro‘yxatdan o‘tish"
+			},
+			"secondStep": {
+				"useTemp": "Shablonlardan foydalaning"
+			},
+			"thirdStep": {
+				"postJob": "Ish eʼlon qilish"
+			}
+		},
+		"ourPartners": {
+			"title": "Hamkorlarimiz",
+			"subtitle": "Birgalikda biz Aumetani haqiqatga aylantiramiz."
+		},
+		"reviews": {
+			"title": "Sharhlar"
+		}
+	},
+	"homeModals": {
+		"titles": {
+			"postJob": "Ish joylashtirish",
+			"postFreelance": "Frilans joylashtirish",
+			"postOneTimeJob": "Bir martalik ish joylashtirish",
+			"postInternship": "Amaliyot joylashtirish"
+		},
+		"description": "Vakansiyani yuborish uchun iltimos, formani to'ldiring",
+		"contactInformation": {
+			"country": "Davlat",
+			"region": "Viloyat",
+			"city": "Shahar",
+			"address": "Manzil",
+			"email": "Elektron pochta",
+			"organisation": "Tashkilot"
+		},
+		"internshipInformation": {
+			"jobInformation": "Ish ma'lumotlari",
+			"header": "Amaliyot ma'lumotlari",
+			"professionTitle": "Kasb nomi",
+			"jobCategory": "Ish kategoriyasi",
+			"industry": "Sanoat",
+			"requirements": "Talablar",
+			"obligations": "Majburiyatlar",
+			"companyName": "Kompaniya nomi",
+			"jobDescription": "Ish tavsifi"
+		},
+		"checkInformation": {
+			"header": "Ma'lumotlarni tekshirish",
+			"jobSummery": "Ish xulosasi",
+			"requirements": "Talablar",
+			"obligations": "Majburiyatlar",
+			"industry": "Sanoat",
+			"conditions": "Shartlar",
+			"contacts": "Aloqalar",
+			"phoneNumber": "Telefon raqami"
+		},
+		"freelancerInformation": {
+			"header": "Frilanser ma'lumotlari",
+			"jobType": "Ish turi",
+			"jobTime": "Ish vaqti",
+			"jobSalary": "Ish maoshi",
+			"jobGraphic": "Ish grafikasi",
+			"hideSalary": "Maoshni yashirish?",
+			"jobSummery": "Ish xulosasi",
+			"deadline": "Muddat",
+			"skillsAndExperience": "Ko'nikmalar va tajriba",
+			"assignments": "Topshiriqlar",
+			"supplement": "Qo'shimcha",
+			"professionTitle": "Kasb nomi",
+			"contacts": "Aloqalar"
+		}
+	}
 }

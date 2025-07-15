@@ -1,86 +1,131 @@
 {
-  "homePage": {
-    "headline": "Нанимайте лучших специалистов без лишних затрат!",
-    "description": "Этот веб-портал помогает бизнесу и фрилансерам сотрудничать, упрощая проекты и процесс найма.",
-    "actions": {
-      "postJob": "Разместить вакансию",
-      "howToUse": "Как использовать?"
-    },
-    "postYourInformation": "Разместить информацию",
-    "jobTypes": {
-      "job": {
-        "title": "Работа",
-        "description": "Возможности полной занятости для долгосрочного карьерного роста."
-      },
-      "freelance": {
-        "title": "Фриланс",
-        "description": "Гибкая проектная работа на контрактной основе."
-      },
-      "oneTimeJob": {
-        "title": "Разовая работа",
-        "description": "Единичные задачи или проекты с четким сроком выполнения."
-      },
-      "internship": {
-        "title": "Стажировка",
-        "description": "Временные позиции для получения профессионального опыта, идеально для студентов и начинающих специалистов."
-      }
-    },
-    "templates": {
-      "templates": "Шаблоны",
-      "useThisTemplate": "Использовать этот шаблон"
-    }
-  },
-  "homeModals": {
-    "titles": {
-      "postJob": "Разместить вакансию",
-      "postFreelance": "Разместить фриланс",
-      "postOneTimeJob": "Разместить разовую работу",
-      "postInternship": "Разместить стажировку"
-    },
-    "description": "Чтобы отправить вакансию, пожалуйста, заполните форму",
-    "contactInformation": {
-      "country": "Страна",
-      "region": "Регион",
-      "city": "Город",
-      "address": "Адрес",
-      "email": "Электронная почта",
-      "organisation": "Организация"
-    },
-    "internshipInformation": {
-      "jobInformation": "Информация о работе",
-      "header": "Информация о стажировке",
-      "professionTitle": "Название профессии",
-      "jobCategory": "Категория работы",
-      "industry": "Отрасль",
-      "requirements": "Требования",
-      "obligations": "Обязанности",
-      "companyName": "Название компании",
-      "jobDescription": "Описание работы"
-    },
-    "checkInformation": {
-      "header": "Проверка информации",
-      "jobSummery": "Краткое описание работы",
-      "requirements": "Требования",
-      "obligations": "Обязанности",
-      "industry": "Отрасль",
-      "conditions": "Условия",
-      "contacts": "Контакты",
-      "phoneNumber": "Номер телефона"
-    },
-    "freelancerInformation": {
-      "header": "Информация о фрилансе",
-      "jobType": "Тип работы",
-      "jobTime": "Время работы",
-      "jobSalary": "Зарплата",
-      "jobGraphic": "График работы",
-      "hideSalary": "Скрыть зарплату?",
-      "jobSummery": "Краткое описание работы",
-      "deadline": "Срок",
-      "skillsAndExperience": "Навыки и опыт",
-      "assignments": "Задания",
-      "supplement": "Дополнение",
-      "professionTitle": "Название профессии",
-      "contacts": "Контакты"
-    }
-  }
+	"homePage": {
+		"headline": "Нанимайте лучших специалистов без лишних затрат!",
+		"purpose": "Aumeta — Butun dunyo \n iqtidorlari imkoniyat bilan uchrashadigan joy",
+		"description": "Этот веб-портал помогает бизнесу и фрилансерам сотрудничать, упрощая проекты и процесс найма.",
+		"actions": {
+			"postJob": "Ish joylashtirish",
+			"howToUse": "Как использовать?"
+		},
+		"postYourInformation": "Разместить информацию",
+		"jobTypes": {
+			"job": {
+				"title": "Работа",
+				"description": "Возможности полной занятости для долгосрочного карьерного роста."
+			},
+			"freelance": {
+				"title": "Фриланс",
+				"description": "Гибкая проектная работа на контрактной основе."
+			},
+			"oneTimeJob": {
+				"title": "Разовая работа",
+				"description": "Единичные задачи или проекты с четким сроком выполнения."
+			},
+			"internship": {
+				"title": "Стажировка",
+				"description": "Временные позиции для получения профессионального опыта, идеально для студентов и начинающих специалистов."
+			}
+		},
+		"templates": {
+			"templates": "Шаблоны",
+			"useThisTemplate": "Использовать этот шаблон"
+		},
+		"statistics": {
+			"country": "Mamlakat",
+			"companies": "Kompaniyalar",
+			"candidates": "Nomzodlar",
+			"newJobs": "Yangi ish o‘rinlari"
+		},
+		"aboutUs": {
+			"title": "Aumeta nima?",
+			"text": "Aumeta shunchaki platforma emas. Bu — iqtidorli odamlar imkoniyatlar bilan uchrashadigan makon. Biz bizneslarga rivojlanishga, odamlarni esa o‘zlarini ro‘yobga chiqarishga yordam beramiz. Ushbu veb-portal kompaniyalarni freelancerlar bilan bog‘laydi, loyiha asosida hamkorlik va ishga olish jarayonini osonlashtiradi."
+		},
+		"infoHowToUse": {
+			"title": "Qanday foydalanish haqida ma'lumot",
+			"step": "Qadam",
+			"firstStep": {
+				"cards": {
+					"company": {
+						"title ": "Kompaniya",
+						"text": "Agar siz kompaniya egasi yoki xodimi bo‘lsangiz — bu siz uchun."
+					},
+					"hr": {
+						"title": "HR",
+						"text": "Barcha faoliyatingizni boshqarish uchun shaxsiy kabinet."
+					},
+					"oneTimeJob": {
+						"title": "Bir martalik ish",
+						"text": "Barcha faoliyatingizni boshqarish uchun shaxsiy kabinet."
+					}
+				},
+				"signUp": "Ro‘yxatdan o‘tish"
+			},
+			"secondStep": {
+				"useTemp": "Shablonlardan foydalaning"
+			},
+			"thirdStep": {
+				"postJob": "Ish eʼlon qilish"
+			}
+		},
+		"ourPartners": {
+			"title": "Hamkorlarimiz",
+			"subtitle": "Birgalikda biz Aumetani haqiqatga aylantiramiz."
+		},
+		"reviews": {
+			"title": "Sharhlar"
+		}
+	},
+	"homeModals": {
+		"titles": {
+			"postJob": "Разместить вакансию",
+			"postFreelance": "Разместить фриланс",
+			"postOneTimeJob": "Разместить разовую работу",
+			"postInternship": "Разместить стажировку"
+		},
+		"description": "Чтобы отправить вакансию, пожалуйста, заполните форму",
+		"contactInformation": {
+			"country": "Страна",
+			"region": "Регион",
+			"city": "Город",
+			"address": "Адрес",
+			"email": "Электронная почта",
+			"organisation": "Организация"
+		},
+		"internshipInformation": {
+			"jobInformation": "Информация о работе",
+			"header": "Информация о стажировке",
+			"professionTitle": "Название профессии",
+			"jobCategory": "Категория работы",
+			"industry": "Отрасль",
+			"requirements": "Требования",
+			"obligations": "Обязанности",
+			"companyName": "Название компании",
+			"jobDescription": "Описание работы"
+		},
+		"checkInformation": {
+			"header": "Проверка информации",
+			"jobSummery": "Краткое описание работы",
+			"requirements": "Требования",
+			"obligations": "Обязанности",
+			"industry": "Отрасль",
+			"conditions": "Условия",
+			"contacts": "Контакты",
+			"phoneNumber": "Номер телефона"
+		},
+		"freelancerInformation": {
+			"header": "Информация о фрилансе",
+			"jobType": "Тип работы",
+			"jobTime": "Время работы",
+			"jobSalary": "Зарплата",
+			"jobGraphic": "График работы",
+			"hideSalary": "Скрыть зарплату?",
+			"jobSummery": "Краткое описание работы",
+			"deadline": "Срок",
+			"skillsAndExperience": "Навыки и опыт",
+			"assignments": "Задания",
+			"supplement": "Дополнение",
+			"professionTitle": "Название профессии",
+			"contacts": "Контакты"
+		}
+	}
 }
