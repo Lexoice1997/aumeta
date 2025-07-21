@@ -6,8 +6,9 @@
 	border-radius: 999px;
 	padding: rem(2);
 	background: linear-gradient(to right, #999, var(--bg-gray));
-	width: fit-content;
+	width: rem(110);
 	.container {
+		width: 100%;
 		background-color: var(--bg-gray);
 	}
 	> * {
@@ -15,13 +16,15 @@
 		padding: rem(6);
 		display: flex;
 		align-items: center;
+		gap: rem(8);
 	}
 
 	.circle {
-		width: rem(28);
-		height: rem(28);
+		width: rem(30);
+		height: rem(30);
 		background-color: #d9d9d9;
 		border-radius: 50%;
+		border: 1px solid var(--blue-500);
 		display: flex;
 		align-items: center;
 		justify-content: center;

@@ -48,6 +48,8 @@ const data = [
 	},
 ]
 
+type CardType = 'company' | 'hr' | 'oneTimeJob'
+
 export const MainPage = () => {
 	const carouselRef = useRef<CarouselRef>(null)
 
@@ -55,6 +57,18 @@ export const MainPage = () => {
 	const prev = () => carouselRef.current?.prev()
 
 	const { t } = useTranslation('main')
+
+	const cardContent: Record<CardType, { title: string }> = {
+		company: {
+			title: t('homePage.infoHowToUse.firstStep.cards.company.title'),
+		},
+		hr: {
+			title: t('homePage.infoHowToUse.firstStep.cards.hr.title'),
+		},
+		oneTimeJob: {
+			title: t('homePage.infoHowToUse.firstStep.cards.oneTimeJob.title'),
+		},
+	}
 
 	// const dispatch = useAppDispatch()
 
@@ -74,7 +88,7 @@ export const MainPage = () => {
 	// 	dispatch(setPostInternshipModalData({ visible: true }))
 	// }
 
-	const [selected, setSelected] = useState('company')
+	const [selected, setSelected] = useState<CardType>('company')
 
 	return (
 		<div className={styles.main}>
@@ -97,7 +111,6 @@ export const MainPage = () => {
 								style={{
 									background:
 										'linear-gradient(45deg, rgba(186,213,243,1), rgba(186,213,243,0))',
-									textTransform: 'uppercase',
 								}}
 							>
 								{t('homePage.actions.postJob')}
@@ -182,7 +195,7 @@ export const MainPage = () => {
 							</div>
 							<div>
 								<h2>
-									{t('homePage.infoHowToUse.firstStep.cards.company.title ')}
+									{t('homePage.infoHowToUse.firstStep.cards.company.title')}
 								</h2>
 								<p>{t('homePage.infoHowToUse.firstStep.cards.company.text')}</p>
 							</div>
@@ -222,22 +235,22 @@ export const MainPage = () => {
 					</div>
 					<main>
 						<aside>
-							<h2>
-								{t('homePage.infoHowToUse.firstStep.cards.company.title ')}
-							</h2>
+							<h2>{cardContent[selected].title}</h2>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+								exercitationem maxime numquam rem obcaecati, eligendi hic
+								tempora natus minima est? Harum rem tenetur perferendis eaque
+								explicabo saepe totam quos doloremque?
+								<br />
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
+								commodi, consequatur a ut inventore suscipit magnam ullam,
+								quibusdam dolorum cumque deleniti itaque similique quis tenetur
+								aliquid totam ex eum corporis!
+								<br />
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+								velit laboriosam? Nobis minus quia iste, alias animi, sapiente
+								fugiat officia commodi qui similique impedit labore sint,
+								explicabo quibusdam deserunt voluptates?
 							</p>
 						</aside>
 						<div>
