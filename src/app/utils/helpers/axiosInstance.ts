@@ -13,7 +13,7 @@ $api.interceptors.response.use(
     const originalRequest = error.config
 
     // If the error is a 401 and we have a refresh token, refresh the JWT token
-    if (error.response.status === 401) {
+    if (error?.response?.status === 401) {
       $api
         .get("auth/refresh")
         .then(() => {

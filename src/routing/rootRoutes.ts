@@ -12,7 +12,7 @@ import { ResetPassword } from "../features/auth/pages/reset-password/ResetPasswo
 import { SignIn } from "../features/auth/pages/sign-in/SignIn"
 import { SignUpPage } from "../features/auth/pages/sign-up/SignUp"
 import { MainPage } from "../features/main/Index"
-import { ProfilePage } from '../features/profile/Index'
+import { ProfilePage } from "../features/profile/Index"
 
 export const mainRoutes: RouteModel[] = [
   {

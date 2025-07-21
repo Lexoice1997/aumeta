@@ -1,7 +1,7 @@
 import { Button } from "antd"
 import { FC, useState } from "react"
-import OTPInput from "react-otp-input"
 import { useTranslation } from "react-i18next"
+import OTPInput from "react-otp-input"
 
 import { useCheckVerifyEmailCode } from "../../../services/authMutations"
 import { ReSendCode } from "./ReSendCode"
@@ -11,10 +11,11 @@ import styles from "./signUpOtp.module.scss"
 type Props = {
   afterSuccess: () => void
   email: string
+  onBack: () => void
 }
 
-export const SignUpVerifyCode: FC<Props> = ({ afterSuccess, email }) => {
-  const { t } = useTranslation('auth')
+export const SignUpVerifyCode: FC<Props> = ({ afterSuccess, email, onBack }) => {
+  const { t } = useTranslation("auth")
   const [code, setCode] = useState("")
   const checkCode = useCheckVerifyEmailCode()
 
@@ -28,6 +29,9 @@ export const SignUpVerifyCode: FC<Props> = ({ afterSuccess, email }) => {
 
   return (
     <div className={styles.code}>
+      <p>
+        {t("enterEmail.confirmationCode")} {email}
+      </p>
       <OTPInput
         value={code}
         onChange={setCode}
@@ -38,7 +42,10 @@ export const SignUpVerifyCode: FC<Props> = ({ afterSuccess, email }) => {
       />
       <ReSendCode email={email} />
       <Button size='large' loading={checkCode.isPending} onClick={onVerifyCode} type='primary'>
-        {t('enterEmail.continue')}
+        {t("enterEmail.continue")}
+      </Button>
+      <Button type='link' onClick={onBack}>
+        Назад
       </Button>
     </div>
   )

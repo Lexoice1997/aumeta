@@ -12,6 +12,10 @@ import { PostJobModal } from "./components/post-job/PostJobModal"
 import { PostOneTimeJobModal } from "./components/post-one-time-job/PostOneTimeJob"
 import { setPostFreelanceModalData, setPostInternshipModalData, setPostModalData, setPostOneTimeModalData } from "./slices/mainSlice"
 
+import { CircleWavyIcon } from "@assets/icons/CircleWavyIcon"
+import { CloudArrowIcon } from "@assets/icons/CloudArrowIcon"
+import { MagnifyingIcon } from "@assets/icons/MagnifyingIcon"
+import { UserPlusIcon } from "@assets/icons/UserPlusIcon"
 import styles from "./index.module.scss"
 
 export const MainPage = () => {
@@ -86,6 +90,31 @@ export const MainPage = () => {
             <Button type='primary' onClick={onOpenInternshipModal}>
               {t("homePage.templates.templates")} <SendIcon />
             </Button>
+          </div>
+        </div>
+      </div>
+      <div className={styles.section_work}>
+        <h2>How Aumeta work</h2>
+        <div className={styles.works}>
+          <div className={styles.work}>
+            <UserPlusIcon />
+            <h3 className={styles.work__title}>Create account</h3>
+            <p className={styles.work__desc}>Sign up on the platform to access tools for job searching or hiring employees.</p>
+          </div>
+          <div className={styles.work}>
+            <CloudArrowIcon />
+            <h3 className={styles.work__title}>Find Templates</h3>
+            <p className={styles.work__desc}>Choose and customize job posting templates to simplify the vacancy creation process.</p>
+          </div>
+          <div className={styles.work}>
+            <MagnifyingIcon />
+            <h3 className={styles.work__title}>Post Job</h3>
+            <p className={styles.work__desc}>Publish a job listing, specify the requirements, and receive applications from candidates.</p>
+          </div>
+          <div className={styles.work}>
+            <CircleWavyIcon />
+            <h3 className={styles.work__title}>Find worker</h3>
+            <p className={styles.work__desc}>Select the best candidates from the applications and invite them for an interview.</p>
           </div>
         </div>
       </div>
