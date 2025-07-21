@@ -1,60 +1,61 @@
 {
-  "save": "Saqlash",
-  "edit": "Tahrirlash",
-  "cancel": "Bekor qilish",
-  "delete": "O'chirish",
-  "update": "Yangilash",
-  "submit": "Yuborish",
-  "reset": "Qayta tiklash",
-  "confirm": "Tasdiqlash",
-  "back": "Orqaga",
-  "next": "Keyingi",
-  "close": "Yopish",
-  "loading": "Yuklanmoqda",
-  "date": "Sana",
-  "time": "Vaqt",
-  "previous": "Oldingi",
-  "profile": "Profil",
-  "logout": "Chiqish",
-  "footer": {
-    "description": "Ushbu xizmat veb-portali korxonalarni frilanserlar bilan bog'laydi, loyiha hamkorligi va yollashni osonlashtiradi",
-    "quickLink": {
-      "title": "Havolalar",
-      "about": "Haqida",
-      "contact": "Aloqa",
-      "pricing": "Narxlar"
-    },
-    "employers": {
-      "title": "Ish beruvchilar",
-      "postAJob": "Ish joylashtirish",
-      "recentlyPost": "Yaqinda joylashtirilgan"
-    },
-    "information": {
-      "title": "Ma'lumotlar",
-      "support": "Yordam",
-      "faqs": "Tez-tez so'raladigan savollar",
-      "privacyPolicy": "Maxfiylik siyosati",
-      "termsAndConditions": "Foydalanish shartlari"
-    },
-    "privacy": "Maxfiylik",
-    "siteMap": "Sayt xaritasi",
-    "company": "Kompaniya"
-  },
-  "navbar": {
-    "postJob": "Ish o'rinlari",
-    "startUp": "Startap",
-    "events": "Tadbirlar",
-    "grants": "Grantlar",
-    "hrCompany": "HR kompaniya"
-  },
-  "error": "Kechirasiz, nimadir noto'g'ri ketdi!",
-  "notfound": {
-    "header": "Sahifa topilmadi!",
-    "description": "So'ralgan sahifa saytdagi boshqa joyga ko'chirilgan yoki umuman o'chirilgan bo'lishi mumkin."
-  },
-  "forbidden": {
-    "header": "Kirish imkoni yo'q!",
-    "description": "Foydalanuvchida so'ralgan sahifa yoki resursga kirish uchun zarur ruxsatlar mavjud emas.",
-    "logout": "Chiqish"
-  }
+	"save": "Saqlash",
+	"edit": "Tahrirlash",
+	"cancel": "Bekor qilish",
+	"delete": "O'chirish",
+	"update": "Yangilash",
+	"submit": "Yuborish",
+	"reset": "Qayta tiklash",
+	"confirm": "Tasdiqlash",
+	"back": "Orqaga",
+	"next": "Keyingi",
+	"close": "Yopish",
+	"loading": "Yuklanmoqda",
+	"date": "Sana",
+	"time": "Vaqt",
+	"previous": "Oldingi",
+	"profile": "Profil",
+	"logout": "Chiqish",
+	"footer": {
+		"description": "Ushbu xizmat veb-portali korxonalarni frilanserlar bilan bog'laydi, loyiha hamkorligi va yollashni osonlashtiradi",
+		"quickLink": {
+			"title": "Havolalar",
+			"about": "Haqida",
+			"contact": "Aloqa",
+			"pricing": "Narxlar"
+		},
+		"employers": {
+			"title": "Ish beruvchilar",
+			"postAJob": "Ish joylashtirish",
+			"recentlyPost": "Yaqinda joylashtirilgan"
+		},
+		"information": {
+			"title": "Ma'lumotlar",
+			"support": "Yordam",
+			"faqs": "Tez-tez so'raladigan savollar",
+			"privacyPolicy": "Maxfiylik siyosati",
+			"termsAndConditions": "Foydalanish shartlari"
+		},
+		"privacy": "Maxfiylik",
+		"siteMap": "Sayt xaritasi",
+		"company": "Kompaniya"
+	},
+	"navbar": {
+		"postJob": "Ish o'rinlari",
+		"startUp": "Startap",
+		"events": "Tadbirlar",
+		"grants": "Grantlar",
+		"hrCompany": "HR kompaniya",
+		"findJobs": "Ish qidirish"
+	},
+	"error": "Kechirasiz, nimadir noto'g'ri ketdi!",
+	"notfound": {
+		"header": "Sahifa topilmadi!",
+		"description": "So'ralgan sahifa saytdagi boshqa joyga ko'chirilgan yoki umuman o'chirilgan bo'lishi mumkin."
+	},
+	"forbidden": {
+		"header": "Kirish imkoni yo'q!",
+		"description": "Foydalanuvchida so'ralgan sahifa yoki resursga kirish uchun zarur ruxsatlar mavjud emas.",
+		"logout": "Chiqish"
+	}
 }

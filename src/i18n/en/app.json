@@ -1,60 +1,61 @@
 {
-  "save": "Save",
-  "edit": "Edit",
-  "cancel": "Cancel",
-  "delete": "Delete",
-  "update": "Update",
-  "submit": "Submit",
-  "reset": "Reset",
-  "confirm": "Confirm",
-  "back": "Back",
-  "next": "Next",
-  "close": "Close",
-  "loading": "Loading",
-  "date": "Date",
-  "time": "Time",
-  "previous": "Previous",
-  "profile": "Profile",
-  "logout": "Log out",
-  "footer": {
-    "description": "This service web portal connects businesses with freelancers, facilitating project collaboration and hiring",
-    "quickLink": {
-      "title": "Quick Links",
-      "about": "About",
-      "contact": "Contact",
-      "pricing": "Pricing"
-    },
-    "employers": {
-      "title": "Employers",
-      "postAJob": "Post a Job",
-      "recentlyPost": "Recently post"
-    },
-    "information": {
-      "title": "Information",
-      "support": "Support",
-      "faqs": "Faqs",
-      "privacyPolicy": "Privacy Policy",
-      "termsAndConditions": "Terms & Conditions"
-    },
-    "privacy": "Privacy",
-    "siteMap": "Site map",
-    "company": "Company"
-  },
-  "navbar": {
-    "postJob": "Post Job",
-    "startUp": "Start up",
-    "events": "Events",
-    "grants": "Grants",
-    "hrCompany": "HR company"
-  },
-  "error": "Sorry, something went wrong!",
-  "notfound": {
-    "header": "Page not found!",
-    "description": "The requested page may have been moved to another location on the site or deleted entirely."
-  },
-  "forbidden": {
-    "header": "No access!",
-    "description": "The user does not have the necessary permissions to access the requested page or resource.",
-    "logout": "Log out"
-  }
+	"save": "Save",
+	"edit": "Edit",
+	"cancel": "Cancel",
+	"delete": "Delete",
+	"update": "Update",
+	"submit": "Submit",
+	"reset": "Reset",
+	"confirm": "Confirm",
+	"back": "Back",
+	"next": "Next",
+	"close": "Close",
+	"loading": "Loading",
+	"date": "Date",
+	"time": "Time",
+	"previous": "Previous",
+	"profile": "Profile",
+	"logout": "Log out",
+	"footer": {
+		"description": "This service web portal connects businesses with freelancers, facilitating project collaboration and hiring",
+		"quickLink": {
+			"title": "Quick Links",
+			"about": "About",
+			"contact": "Contact",
+			"pricing": "Pricing"
+		},
+		"employers": {
+			"title": "Employers",
+			"postAJob": "Post a Job",
+			"recentlyPost": "Recently post"
+		},
+		"information": {
+			"title": "Information",
+			"support": "Support",
+			"faqs": "Faqs",
+			"privacyPolicy": "Privacy Policy",
+			"termsAndConditions": "Terms & Conditions"
+		},
+		"privacy": "Privacy",
+		"siteMap": "Site map",
+		"company": "Company"
+	},
+	"navbar": {
+		"postJob": "Post Job",
+		"startUp": "Start up",
+		"events": "Events",
+		"grants": "Grants",
+		"hrCompany": "HR company",
+		"findJobs": "Find jobs"
+	},
+	"error": "Sorry, something went wrong!",
+	"notfound": {
+		"header": "Page not found!",
+		"description": "The requested page may have been moved to another location on the site or deleted entirely."
+	},
+	"forbidden": {
+		"header": "No access!",
+		"description": "The user does not have the necessary permissions to access the requested page or resource.",
+		"logout": "Log out"
+	}
 }

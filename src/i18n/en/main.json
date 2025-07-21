@@ -1,86 +1,131 @@
 {
-  "homePage": {
-    "headline": "Hire Top Talent Without Breakingthen the Bank!",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "actions": {
-      "postJob": "Post job",
-      "howToUse": "How to use?"
-    },
-    "postYourInformation": "Post your information",
-    "jobTypes": {
-      "job": {
-        "title": "Job",
-        "description": "Full-time employment opportunities for long-term career growth."
-      },
-      "freelance": {
-        "title": "Freelance",
-        "description": "Flexible project-based work on a contract basis."
-      },
-      "oneTimeJob": {
-        "title": "One-time job",
-        "description": "Single tasks or projects with a defined completion timeline."
-      },
-      "internship": {
-        "title": "Internship",
-        "description": "Temporary positions for gaining professional experience, ideal for students or beginners."
-      }
-    },
-    "templates": {
-      "templates": "Templates",
-      "useThisTemplate": "Use this Template"
-    }
-  },
-  "homeModals": {
-    "titles": {
-      "postJob": "Post job",
-      "postFreelance": "Post freelance",
-      "postOneTimeJob": "Post one-time job",
-      "postInternship": "Post Internship"
-    },
-    "description": "To submit a vacancy, please fill in the form",
-    "contactInformation": {
-      "country": "Country",
-      "region": "Region",
-      "city": "City",
-      "address": "Address",
-      "email": "Email",
-      "organisation": "Organisation"
-    },
-    "internshipInformation": {
-      "jobInformation": "Job information",
-      "header": "Internship information",
-      "professionTitle": "Profession title",
-      "jobCategory": "Job category",
-      "industry": "Industry",
-      "requirements": "Requirements",
-      "obligations": "Obligations",
-      "companyName": "Company name",
-      "jobDescription": "Job description"
-    },
-    "checkInformation": {
-      "header": "Check information",
-      "jobSummery": "Job Summery",
-      "requirements": "Requirements",
-      "obligations": "Obligations",
-      "industry": "Industry",
-      "conditions": "Conditions",
-      "contacts": "Contacts",
-      "phoneNumber": "Phone number"
-    },
-    "freelancerInformation": {
-      "header": "Freelancer information",
-      "jobType": "Job Type",
-      "jobTime": "Job Time",
-      "jobSalary": "Job Salary",
-      "jobGraphic": "Job Graphic",
-      "hideSalary": "Hide salary?",
-      "jobSummery": "Job Summery",
-      "deadline": "Deadline",
-      "skillsAndExperience": "Skills and Experience",
-      "assignments": "Assignments",
-      "supplement": "Supplement",
-      "professionTitle": "Profession title",
-      "contacts": "Contacts"
-    }
-  }
+	"homePage": {
+		"headline": "Hire Top Talent Without Breakingthen the Bank!",
+		"purpose": "Aumeta — Where Global  Talent Meets Purpose",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"actions": {
+			"postJob": "Post job",
+			"howToUse": "How to use?"
+		},
+		"postYourInformation": "Post your information",
+		"jobTypes": {
+			"job": {
+				"title": "Job",
+				"description": "Full-time employment opportunities for long-term career growth."
+			},
+			"freelance": {
+				"title": "Freelance",
+				"description": "Flexible project-based work on a contract basis."
+			},
+			"oneTimeJob": {
+				"title": "One-time job",
+				"description": "Single tasks or projects with a defined completion timeline."
+			},
+			"internship": {
+				"title": "Internship",
+				"description": "Temporary positions for gaining professional experience, ideal for students or beginners."
+			}
+		},
+		"templates": {
+			"templates": "Templates",
+			"useThisTemplate": "Use this Template"
+		},
+		"statistics": {
+			"country": "Country",
+			"companies": "Companies",
+			"candidates": "Candidates",
+			"newJobs": "New Jobs"
+		},
+		"aboutUs": {
+			"title": "What's Aumeta?",
+			"text": "Aumeta is not just a platform. It is a space where talented people meet opportunities. We help businesses to grow and people to fulfil themselves. This service web portal connects businesses with freelancers, facilitating project collaboration and hiring"
+		},
+		"infoHowToUse": {
+			"title": "Information how to use",
+			"step": "Step",
+			"firstStep": {
+				"cards": {
+					"company": {
+						"title": "Company",
+						"text": "Own or belong to a company, this is for you."
+					},
+					"hr": {
+						"title": "HR",
+						"text": "Personal account to manage all you activities."
+					},
+					"oneTimeJob": {
+						"title": "Оne-time job",
+						"text": "Personal account to manage all you activities."
+					}
+				},
+				"signUp": "Sign Up"
+			},
+			"secondStep": {
+				"useTemp": "Use templates"
+			},
+			"thirdStep": {
+				"postJob": "Post job"
+			}
+		},
+		"ourPartners": {
+			"title": "Our Partners",
+			"subtitle": "Together we make Aumeta a reality."
+		},
+		"reviews": {
+			"title": "Reviews"
+		}
+	},
+	"homeModals": {
+		"titles": {
+			"postJob": "Post job",
+			"postFreelance": "Post freelance",
+			"postOneTimeJob": "Post one-time job",
+			"postInternship": "Post Internship"
+		},
+		"description": "To submit a vacancy, please fill in the form",
+		"contactInformation": {
+			"country": "Country",
+			"region": "Region",
+			"city": "City",
+			"address": "Address",
+			"email": "Email",
+			"organisation": "Organisation"
+		},
+		"internshipInformation": {
+			"jobInformation": "Job information",
+			"header": "Internship information",
+			"professionTitle": "Profession title",
+			"jobCategory": "Job category",
+			"industry": "Industry",
+			"requirements": "Requirements",
+			"obligations": "Obligations",
+			"companyName": "Company name",
+			"jobDescription": "Job description"
+		},
+		"checkInformation": {
+			"header": "Check information",
+			"jobSummery": "Job Summery",
+			"requirements": "Requirements",
+			"obligations": "Obligations",
+			"industry": "Industry",
+			"conditions": "Conditions",
+			"contacts": "Contacts",
+			"phoneNumber": "Phone number"
+		},
+		"freelancerInformation": {
+			"header": "Freelancer information",
+			"jobType": "Job Type",
+			"jobTime": "Job Time",
+			"jobSalary": "Job Salary",
+			"jobGraphic": "Job Graphic",
+			"hideSalary": "Hide salary?",
+			"jobSummery": "Job Summery",
+			"deadline": "Deadline",
+			"skillsAndExperience": "Skills and Experience",
+			"assignments": "Assignments",
+			"supplement": "Supplement",
+			"professionTitle": "Profession title",
+			"contacts": "Contacts"
+		}
+	}
 }
