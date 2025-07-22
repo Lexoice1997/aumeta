@@ -1,7 +1,7 @@
-@import "../../../../../styles/functions";
+@use "../../../../../styles/functions" as functions;
 
 .form {
-  width: rem(410);
+  width: functions.rem(410);
 
   .submit {
     width: 100%;

@@ -1,23 +1,23 @@
-@import "../../../../../styles/functions";
+@use "../../../../../styles/functions" as functions;
 
 .body {
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
-  width: rem(392);
+  width: functions.rem(392);
 
   &__title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: rem(12);
+    row-gap: functions.rem(12);
     text-align: center;
 
     h1 {
       color: var(--gray-900);
-      font-size: rem(36);
+      font-size: functions.rem(36);
       font-weight: 600;
-      line-height: rem(44);
+      line-height: functions.rem(44);
       letter-spacing: -0.72px;
       margin: 0;
     }
@@ -39,10 +39,10 @@
     a {
       display: block;
       color: var(--primary-700);
-      font-size: rem(14);
+      font-size: functions.rem(14);
       font-weight: 600;
-      line-height: rem(20);
-      margin: rem(4) 0 rem(24) auto;
+      line-height: functions.rem(20);
+      margin: functions.rem(4) 0 functions.rem(24) auto;
     }
 
     button {
@@ -52,9 +52,9 @@
 
   &__sign_up {
     display: flex;
-    margin-top: rem(12);
+    margin-top: functions.rem(12);
     justify-content: center;
-    gap: rem(4);
+    gap: functions.rem(4);
 
     a {
       margin: 0;

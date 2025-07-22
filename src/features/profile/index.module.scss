@@ -1,4 +1,4 @@
-@import "../../styles/functions.scss";
+@use "../../styles/functions.scss" as functions;
 
 .section {
   background: #f6f6f6 !important;
@@ -7,14 +7,14 @@
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: rem(40) rem(20);
+  padding: functions.rem(40) functions.rem(20);
 }
 
 .wrapper {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr rem(354);
-  gap: rem(25);
+  grid-template-columns: 1fr functions.rem(354);
+  gap: functions.rem(25);
 
   @media screen and (max-width: 999px) {
     grid-template-columns: 1fr;
@@ -24,19 +24,19 @@
 .profile_panel {
   position: relative;
   background: var(--white);
-  border-radius: rem(30);
+  border-radius: functions.rem(30);
   &__top {
-    height: rem(180);
-    border-radius: rem(30);
+    height: functions.rem(180);
+    border-radius: functions.rem(30);
     background: var(--primary-600);
   }
 
   &__avatar {
     position: absolute;
-    top: rem(80);
-    left: rem(40);
-    height: rem(200);
-    width: rem(200);
+    top: functions.rem(80);
+    left: functions.rem(40);
+    height: functions.rem(200);
+    width: functions.rem(200);
     border-radius: 50%;
     background: #f6f6f6;
     display: flex;
@@ -44,13 +44,13 @@
     align-items: center;
 
     @media screen and (max-width: 700px) {
-      width: rem(160);
-      height: rem(160);
-      left: rem(20);
+      width: functions.rem(160);
+      height: functions.rem(160);
+      left: functions.rem(20);
     }
 
     &_name {
-      font-size: rem(60);
+      font-size: functions.rem(60);
       font-weight: 600;
       color: var(--primary-600);
     }
@@ -64,24 +64,24 @@
   }
 
   &__body {
-    padding: rem(30);
-    padding-left: rem(250);
+    padding: functions.rem(30);
+    padding-left: functions.rem(250);
     display: flex;
     justify-content: space-between;
 
     @media screen and (max-width: 700px) {
-      padding-left: rem(200);
+      padding-left: functions.rem(200);
       flex-direction: column;
     }
   }
 
   &__company_name {
     h2 {
-      font-size: rem(30);
+      font-size: functions.rem(30);
       font-weight: 400;
     }
     h3 {
-      font-size: rem(16);
+      font-size: functions.rem(16);
       font-weight: 400;
       color: rgba(124, 132, 147, 1);
     }
@@ -91,20 +91,20 @@
     list-style: none;
     padding-left: 0;
     display: grid;
-    gap: rem(12);
+    gap: functions.rem(12);
   }
 
   &__company_item {
     display: grid;
-    gap: rem(6);
+    gap: functions.rem(6);
 
     p {
-      font-size: rem(16);
+      font-size: functions.rem(16);
     }
-    
+
     span {
       font-weight: 300;
-      font-size: rem(12);
+      font-size: functions.rem(12);
       color: rgba(124, 132, 147, 1);
     }
   }
@@ -115,32 +115,32 @@
     justify-content: space-between;
 
     @media screen and (max-width: 700px) {
-      margin-top: rem(20);
+      margin-top: functions.rem(20);
       flex-direction: row;
     }
 
     &_bottom {
       display: flex;
-      gap: rem(12);
+      gap: functions.rem(12);
     }
   }
 }
 
 .card {
-  padding: rem(30);
+  padding: functions.rem(30);
   background: var(--white);
-  border-radius: rem(20);
+  border-radius: functions.rem(20);
   height: fit-content;
 
   &_top {
-    padding-bottom: rem(15);
+    padding-bottom: functions.rem(15);
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   &_title {
-    font-size: rem(24);
+    font-size: functions.rem(24);
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -148,24 +148,23 @@
 
 .posts_wrapper {
   display: grid;
-  gap: rem(12);
+  gap: functions.rem(12);
 }
 
 .post {
-
   &_item {
-    border: rem(1) solid rgba(0,0,0,0.2);
-    border-radius: rem(10);
-    padding: rem(10);
-    padding-left: rem(15);
+    border: functions.rem(1) solid rgba(0, 0, 0, 0.2);
+    border-radius: functions.rem(10);
+    padding: functions.rem(10);
+    padding-left: functions.rem(15);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: rem(12);
+    gap: functions.rem(12);
 
     &__title {
       font-family: Arial, Helvetica, sans-serif;
-      font-size: rem(15);
+      font-size: functions.rem(15);
       font-weight: 600;
       color: #4640de;
     }
@@ -174,17 +173,17 @@
 
 .contacts_wrapper {
   display: grid;
-  gap: rem(20);
+  gap: functions.rem(20);
 }
 
 .contact {
   &_item {
     cursor: pointer;
     display: flex;
-    gap: rem(15);
+    gap: functions.rem(15);
     align-items: center;
   }
-  
+
   &_icon {
     &:hover {
       background: rgba(124, 132, 147, 0.1);
@@ -192,47 +191,47 @@
     &:active {
       background: rgba(124, 132, 147, 0.3);
     }
-    width: rem(40);
-    height: rem(40);
+    width: functions.rem(40);
+    height: functions.rem(40);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: rem(1) solid #9e9e9e;
+    border: functions.rem(1) solid #9e9e9e;
   }
 
   &_title {
-    font-size: rem(16);
+    font-size: functions.rem(16);
   }
 }
 
 .information {
   &_text {
-    font-size: rem(20px);
+    font-size: functions.rem(20);
     color: rgba(124, 132, 147, 1);
     font-weight: 400;
   }
 
   &_top {
-    margin-bottom: rem(20);
+    margin-bottom: functions.rem(20);
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: rem(30);
+    gap: functions.rem(30);
 
     @media screen and (max-width: 700px) {
-      gap: rem(20);
+      gap: functions.rem(20);
     }
   }
 
   &_item {
     display: flex;
     align-items: center;
-    gap: rem(10);
+    gap: functions.rem(10);
 
     &_title {
       font-weight: 400;
-      font-size: rem(16);
+      font-size: functions.rem(16);
     }
   }
 }
