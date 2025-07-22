@@ -1,9 +1,13 @@
 import { Button } from "antd"
 import { useTranslation } from "react-i18next"
 
+import { CircleWavyIcon } from "@assets/icons/CircleWavyIcon"
+import { CloudArrowIcon } from "@assets/icons/CloudArrowIcon"
 import { FreelanceIcon } from "@assets/icons/FreelanceIcon"
 import { JobIcon } from "@assets/icons/JobIcon"
+import { MagnifyingIcon } from "@assets/icons/MagnifyingIcon"
 import { SendIcon } from "@assets/icons/SendIcon"
+import { UserPlusIcon } from "@assets/icons/UserPlusIcon"
 import MainPagePng from "@assets/images/MainPage.png"
 import { useAppDispatch } from "@hooks/useRedux"
 import { PostFreelanceModal } from "./components/post-freelance/PostFreelance"
@@ -12,10 +16,6 @@ import { PostJobModal } from "./components/post-job/PostJobModal"
 import { PostOneTimeJobModal } from "./components/post-one-time-job/PostOneTimeJob"
 import { setPostFreelanceModalData, setPostInternshipModalData, setPostModalData, setPostOneTimeModalData } from "./slices/mainSlice"
 
-import { CircleWavyIcon } from "@assets/icons/CircleWavyIcon"
-import { CloudArrowIcon } from "@assets/icons/CloudArrowIcon"
-import { MagnifyingIcon } from "@assets/icons/MagnifyingIcon"
-import { UserPlusIcon } from "@assets/icons/UserPlusIcon"
 import styles from "./index.module.scss"
 
 export const MainPage = () => {
