@@ -1,12 +1,12 @@
 {
   "homePage": {
-    "headline": "Hire Top Talent Without Breakingthen the Bank!",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "headline": "Hire Top Talent Without Breaking the Bank!",
+    "description": "Aumeta is a modern platform that helps companies quickly find freelancers, specialists, and employees. Just choose a job template, fill out the form — and we’ll show it to people looking for exactly that kind of work.",
     "actions": {
-      "postJob": "Post job",
-      "howToUse": "How to use?"
+      "postJob": "Post a Job",
+      "howToUse": "Learn More"
     },
-    "postYourInformation": "Post your information",
+    "postYourInformation": "Choose a Job Type to Get Started",
     "jobTypes": {
       "job": {
         "title": "Job",
@@ -17,7 +17,7 @@
         "description": "Flexible project-based work on a contract basis."
       },
       "oneTimeJob": {
-        "title": "One-time job",
+        "title": "One-time task",
         "description": "Single tasks or projects with a defined completion timeline."
       },
       "internship": {
@@ -26,7 +26,7 @@
       }
     },
     "templates": {
-      "templates": "Templates",
+      "templates": "Create",
       "useThisTemplate": "Use this Template"
     }
   },

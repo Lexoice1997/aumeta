@@ -1,43 +1,48 @@
-import { Button } from "antd"
-import { useTranslation } from "react-i18next"
+import { Button } from "antd";
+import { useTranslation } from "react-i18next";
 
-import { CircleWavyIcon } from "@assets/icons/CircleWavyIcon"
-import { CloudArrowIcon } from "@assets/icons/CloudArrowIcon"
-import { FreelanceIcon } from "@assets/icons/FreelanceIcon"
-import { JobIcon } from "@assets/icons/JobIcon"
-import { MagnifyingIcon } from "@assets/icons/MagnifyingIcon"
-import { SendIcon } from "@assets/icons/SendIcon"
-import { UserPlusIcon } from "@assets/icons/UserPlusIcon"
-import MainPagePng from "@assets/images/MainPage.png"
-import { useAppDispatch } from "@hooks/useRedux"
-import { PostFreelanceModal } from "./components/post-freelance/PostFreelance"
-import { PostInternshipModal } from "./components/post-internship/PostInternship"
-import { PostJobModal } from "./components/post-job/PostJobModal"
-import { PostOneTimeJobModal } from "./components/post-one-time-job/PostOneTimeJob"
-import { setPostFreelanceModalData, setPostInternshipModalData, setPostModalData, setPostOneTimeModalData } from "./slices/mainSlice"
+import { CircleWavyIcon } from "@assets/icons/CircleWavyIcon";
+import { CloudArrowIcon } from "@assets/icons/CloudArrowIcon";
+import { FreelanceIcon } from "@assets/icons/FreelanceIcon";
+import { JobIcon } from "@assets/icons/JobIcon";
+import { MagnifyingIcon } from "@assets/icons/MagnifyingIcon";
+import { SendIcon } from "@assets/icons/SendIcon";
+import { UserPlusIcon } from "@assets/icons/UserPlusIcon";
+import MainPagePng from "@assets/images/MainPage.png";
+import { useAppDispatch } from "@hooks/useRedux";
+import { PostFreelanceModal } from "./components/post-freelance/PostFreelance";
+import { PostInternshipModal } from "./components/post-internship/PostInternship";
+import { PostJobModal } from "./components/post-job/PostJobModal";
+import { PostOneTimeJobModal } from "./components/post-one-time-job/PostOneTimeJob";
+import {
+  setPostFreelanceModalData,
+  setPostInternshipModalData,
+  setPostModalData,
+  setPostOneTimeModalData
+} from "./slices/mainSlice";
 
-import styles from "./index.module.scss"
+import styles from "./index.module.scss";
 
 export const MainPage = () => {
-  const { t } = useTranslation("main")
+  const { t } = useTranslation("main");
 
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
 
   const onOpenPostModal = () => {
-    dispatch(setPostModalData({ visible: true }))
-  }
+    dispatch(setPostModalData({ visible: true }));
+  };
 
   const onOpenFreelanceModal = () => {
-    dispatch(setPostFreelanceModalData({ visible: true }))
-  }
+    dispatch(setPostFreelanceModalData({ visible: true }));
+  };
 
   const onOpenOneTimeModal = () => {
-    dispatch(setPostOneTimeModalData({ visible: true }))
-  }
+    dispatch(setPostOneTimeModalData({ visible: true }));
+  };
 
   const onOpenInternshipModal = () => {
-    dispatch(setPostInternshipModalData({ visible: true }))
-  }
+    dispatch(setPostInternshipModalData({ visible: true }));
+  };
 
   return (
     <div className={styles.main}>
@@ -46,10 +51,10 @@ export const MainPage = () => {
           <h1>{t("homePage.headline")}</h1>
           <p>{t("homePage.description")}</p>
           <div className={styles.left__buttons}>
-            <Button type='primary' onClick={onOpenPostModal}>
+            <Button type="primary" onClick={onOpenPostModal}>
               {t("homePage.actions.postJob")}
             </Button>
-            <Button type='primary'>{t("homePage.actions.howToUse")}</Button>
+            <Button type="primary">{t("homePage.actions.howToUse")}</Button>
           </div>
         </div>
         <div className={styles.right}>
@@ -63,7 +68,7 @@ export const MainPage = () => {
             <JobIcon />
             <h3>{t("homePage.jobTypes.job.title")}</h3>
             <p>{t("homePage.jobTypes.job.description")}</p>
-            <Button type='primary' onClick={onOpenPostModal}>
+            <Button type="primary" onClick={onOpenPostModal}>
               {t("homePage.templates.templates")} <SendIcon />
             </Button>
           </div>
@@ -71,7 +76,7 @@ export const MainPage = () => {
             <FreelanceIcon />
             <h3>{t("homePage.jobTypes.freelance.title")}</h3>
             <p>{t("homePage.jobTypes.freelance.description")}</p>
-            <Button type='primary' onClick={onOpenFreelanceModal}>
+            <Button type="primary" onClick={onOpenFreelanceModal}>
               {t("homePage.templates.templates")} <SendIcon />
             </Button>
           </div>
@@ -79,7 +84,7 @@ export const MainPage = () => {
             <JobIcon />
             <h3>{t("homePage.jobTypes.oneTimeJob.title")}</h3>
             <p>{t("homePage.jobTypes.oneTimeJob.description")}</p>
-            <Button type='primary' onClick={onOpenOneTimeModal}>
+            <Button type="primary" onClick={onOpenOneTimeModal}>
               {t("homePage.templates.templates")} <SendIcon />
             </Button>
           </div>
@@ -87,7 +92,7 @@ export const MainPage = () => {
             <FreelanceIcon />
             <h3>{t("homePage.jobTypes.internship.title")}</h3>
             <p>{t("homePage.jobTypes.internship.description")}</p>
-            <Button type='primary' onClick={onOpenInternshipModal}>
+            <Button type="primary" onClick={onOpenInternshipModal}>
               {t("homePage.templates.templates")} <SendIcon />
             </Button>
           </div>
@@ -99,22 +104,34 @@ export const MainPage = () => {
           <div className={styles.work}>
             <UserPlusIcon />
             <h3 className={styles.work__title}>Create account</h3>
-            <p className={styles.work__desc}>Sign up on the platform to access tools for job searching or hiring employees.</p>
+            <p className={styles.work__desc}>
+              Sign up on the platform to access tools for job searching or
+              hiring employees.
+            </p>
           </div>
           <div className={styles.work}>
             <CloudArrowIcon />
             <h3 className={styles.work__title}>Find Templates</h3>
-            <p className={styles.work__desc}>Choose and customize job posting templates to simplify the vacancy creation process.</p>
+            <p className={styles.work__desc}>
+              Choose and customize job posting templates to simplify the vacancy
+              creation process.
+            </p>
           </div>
           <div className={styles.work}>
             <MagnifyingIcon />
             <h3 className={styles.work__title}>Post Job</h3>
-            <p className={styles.work__desc}>Publish a job listing, specify the requirements, and receive applications from candidates.</p>
+            <p className={styles.work__desc}>
+              Publish a job listing, specify the requirements, and receive
+              applications from candidates.
+            </p>
           </div>
           <div className={styles.work}>
             <CircleWavyIcon />
             <h3 className={styles.work__title}>Find worker</h3>
-            <p className={styles.work__desc}>Select the best candidates from the applications and invite them for an interview.</p>
+            <p className={styles.work__desc}>
+              Select the best candidates from the applications and invite them
+              for an interview.
+            </p>
           </div>
         </div>
       </div>
@@ -123,5 +140,5 @@ export const MainPage = () => {
       <PostOneTimeJobModal />
       <PostInternshipModal />
     </div>
-  )
-}
+  );
+};

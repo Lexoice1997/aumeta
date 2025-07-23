@@ -1,22 +1,28 @@
-import { Outlet } from "react-router-dom"
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next";
+import { Outlet } from "react-router-dom";
 
-import styles from "./index.module.scss"
+import AuthLogo from "./assets/logo/auth_logo.svg";
+import styles from "./index.module.scss";
 
 export const Auth = () => {
-  const { t } = useTranslation('auth')
-  
+  const { t } = useTranslation("auth");
+
   return (
     <div className={styles.auth}>
       <div className={styles.auth__left}>
         <div className={styles.bg}>
-          <h2>{t('headline')}</h2>
-          <p>{t('description')}</p>
+          <div className={styles.bg__content}>
+            <img src={AuthLogo} alt="Logo of Aumeta" width={196} height={52} />
+            <div>
+              <h2>{t("headline")}</h2>
+              <p>{t("description")}</p>
+            </div>
+          </div>
         </div>
       </div>
       <div className={styles.auth__right}>
         <Outlet />
       </div>
     </div>
-  )
-}
+  );
+};
