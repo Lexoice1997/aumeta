@@ -34,7 +34,7 @@
       background: linear-gradient(to bottom, #b3d0f2, #fff);
 
       h1 {
-        max-width: rem(500);
+        max-width: rem(800);
         line-height: 110%;
         font-size: clamp(rem(30), 5vw, rem(55));
         color: var(--black);
@@ -42,7 +42,7 @@
 
       p {
         color: var(--gray-600);
-        max-width: rem(395);
+        max-width: rem(450);
       }
 
       &__buttons {
