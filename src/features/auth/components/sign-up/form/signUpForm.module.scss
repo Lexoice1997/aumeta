@@ -1,7 +1,18 @@
-@import "../../../../../styles/functions";
+@use "../../../../../styles/functions" as functions;
 
 .form {
-  width: rem(410);
+  width: functions.rem(410);
+
+  &__header {
+    text-align: center;
+    margin-bottom: functions.rem(16);
+  }
+
+  &__help_link {
+    display: block;
+    text-align: center;
+    margin: functions.rem(16) 0;
+  }
 
   .submit {
     width: 100%;

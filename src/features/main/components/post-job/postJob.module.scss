@@ -1,28 +1,28 @@
-@import "../../../../styles/functions";
+@use "../../../../styles/functions" as functions;
 
 .content {
-  padding: rem(12);
+  padding: functions.rem(12);
 
   &__item {
     display: flex;
     flex-direction: column;
-    padding-bottom: rem(24);
-    border-bottom: rem(1) solid var(--gray-300);
+    padding-bottom: functions.rem(24);
+    border-bottom: functions.rem(1) solid var(--gray-300);
 
     .organisation {
-      font-size: rem(16);
+      font-size: functions.rem(16);
       color: var(--black);
     }
 
     h2 {
-      font-size: rem(40);
+      font-size: functions.rem(40);
       font-weight: 400;
     }
 
     h3 {
-      font-size: rem(24);
+      font-size: functions.rem(24);
       font-weight: 400;
-      margin-top: rem(24);
+      margin-top: functions.rem(24);
     }
 
     p {

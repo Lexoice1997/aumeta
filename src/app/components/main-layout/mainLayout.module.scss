@@ -1,4 +1,4 @@
-@import "../../../styles/functions";
+@use "../../../styles/functions" as functions;
 
 .md_hidden {
   display: block !important;
@@ -20,9 +20,9 @@
 }
 
 .column_links {
-  padding-top: rem(40);
+  padding-top: functions.rem(40);
   display: flex;
-  gap: rem(12);
+  gap: functions.rem(12);
   flex-direction: column;
 }
 
@@ -31,9 +31,9 @@
   flex-direction: column;
 
   .header {
-    padding: rem(24) rem(48);
+    padding: functions.rem(24) functions.rem(48);
     @media screen and (max-width: 576px) {
-      padding: rem(24) rem(16);
+      padding: functions.rem(24) functions.rem(16);
     }
     background: #bad5f3;
 
@@ -46,7 +46,7 @@
     &__navbar {
       display: flex;
       align-items: center;
-      gap: rem(38);
+      gap: functions.rem(38);
       list-style: none;
       color: #000000;
 
@@ -62,26 +62,26 @@
     &__right {
       display: flex;
       align-items: center;
-      gap: rem(24);
+      gap: functions.rem(24);
 
       .profile {
         display: flex;
         align-items: center;
-        gap: rem(10);
+        gap: functions.rem(10);
         cursor: pointer;
 
         &__left {
           display: flex;
           flex-direction: column;
-          gap: rem(4);
+          gap: functions.rem(4);
 
           h3 {
             font-weight: 400;
-            font-size: rem(14);
+            font-size: functions.rem(14);
           }
 
           p {
-            font-size: rem(10);
+            font-size: functions.rem(10);
             text-align: right;
           }
         }
@@ -92,16 +92,16 @@
   .footer {
     // display: flex;
     // flex-direction: column;
-    gap: rem(60);
+    gap: functions.rem(60);
     background: #262425;
-    padding: rem(24) 0;
+    padding: functions.rem(24) 0;
     color: var(--white);
 
     .top {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: rem(12);
-      margin-bottom: rem(40);
+      gap: functions.rem(12);
+      margin-bottom: functions.rem(40);
 
       @media screen and (max-width: 900px) {
         grid-template-columns: repeat(2, 1fr);
@@ -111,33 +111,33 @@
         grid-template-columns: repeat(1, 1fr);
       }
 
-      padding: 0 rem(40);
-      padding-top: rem(36);
+      padding: 0 functions.rem(40);
+      padding-top: functions.rem(36);
 
       &__item {
         display: flex;
         flex-direction: column;
-        gap: rem(16);
-        width: rem(240);
+        gap: functions.rem(16);
+        width: functions.rem(240);
 
         p {
           color: var(--gray-400);
         }
 
         .socials {
-          padding-top: rem(20);
+          padding-top: functions.rem(20);
           display: flex;
           align-items: center;
-          gap: rem(20);
+          gap: functions.rem(20);
         }
       }
     }
 
     .bottom {
-      padding: 0 rem(40);
-      padding-top: rem(15);
-      border-top: rem(1) solid var(--white);
-      font-size: rem(12);
+      padding: 0 functions.rem(40);
+      padding-top: functions.rem(15);
+      border-top: functions.rem(1) solid var(--white);
+      font-size: functions.rem(12);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -145,7 +145,7 @@
       &__right {
         display: flex;
         align-items: center;
-        gap: rem(16);
+        gap: functions.rem(16);
       }
     }
   }
@@ -154,5 +154,5 @@
 .dropdown__item {
   display: flex;
   align-items: center;
-  gap: rem(4);
+  gap: functions.rem(4);
 }

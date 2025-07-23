@@ -1,4 +1,4 @@
-@import "../../../styles/functions";
+@use "../../../styles/functions" as functions;
 
 .phone_input {
   position: relative;
@@ -17,26 +17,28 @@
   }
 
   .input_mask {
-    padding: rem(8) rem(11) rem(8) rem(72);
+    padding: functions.rem(8) functions.rem(11) functions.rem(8)
+      functions.rem(72);
   }
 
   span {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: rem(38);
-    width: rem(58);
+    height: functions.rem(38);
+    width: functions.rem(58);
     position: absolute;
     top: 1px;
     left: 1px;
-    border-right: rem(1) solid var(--gray-300);
+    border-right: functions.rem(1) solid var(--gray-300);
     background-color: var(--gray-50);
-    border-radius: rem(8) rem(0) rem(0) rem(8);
+    border-radius: functions.rem(8) functions.rem(0) functions.rem(0)
+      functions.rem(8);
     z-index: 1;
     color: #414e62;
-    font-size: rem(14);
+    font-size: functions.rem(14);
     font-weight: 400;
-    line-height: rem(20);
+    line-height: functions.rem(20);
   }
 
   .spin {
