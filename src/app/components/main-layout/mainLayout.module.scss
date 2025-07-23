@@ -15,7 +15,7 @@
 }
 
 .container {
-  max-width: rem(1440);
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -32,8 +32,11 @@
 
   .header {
     padding: rem(24) rem(48);
+    @media screen and (max-width: 576px) {
+      padding: rem(24) rem(16);
+    }
     background: #bad5f3;
-    
+
     &_items {
       display: flex;
       align-items: center;
@@ -101,11 +104,11 @@
       margin-bottom: rem(40);
 
       @media screen and (max-width: 900px) {
-        grid-template-columns: repeat(2, 1fr);       
+        grid-template-columns: repeat(2, 1fr);
       }
-      
+
       @media screen and (max-width: 500px) {
-        grid-template-columns: repeat(1, 1fr);       
+        grid-template-columns: repeat(1, 1fr);
       }
 
       padding: 0 rem(40);
