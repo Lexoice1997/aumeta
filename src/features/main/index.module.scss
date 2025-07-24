@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   gap: functions.rem(60);
-  padding: functions.rem(24) 0;
-  max-width: 70%;
+  padding: functions.rem(24) functions.rem(24);
+  max-width: functions.rem(1440);
   @media screen and (max-width: 576px) {
     max-width: 95%;
   }
