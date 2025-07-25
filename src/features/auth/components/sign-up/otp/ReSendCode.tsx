@@ -1,61 +1,64 @@
-import { Button } from "antd"
-import { FC, useEffect, useRef, useState } from "react"
+import { Button } from "antd";
+import { FC, useEffect, useRef, useState } from "react";
 
-import { useCheckEmail } from "../../../services/authMutations"
+import { useCheckEmail } from "../../../services/authMutations";
 
-import styles from "./signUpOtp.module.scss"
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next";
+import styles from "./signUpOtp.module.scss";
 
 type Props = {
-  email: string
-}
+  email: string;
+};
 
 export const ReSendCode: FC<Props> = ({ email }) => {
-  const { t } = useTranslation('auth')
-  const [timer, setTimer] = useState(59)
-  const ref = useRef<number>(0)
-  const sendCode = useCheckEmail()
+  const { t } = useTranslation("auth");
+  const [timer, setTimer] = useState(59);
+  const ref = useRef<number>(0);
+  const sendCode = useCheckEmail();
 
   const clear = () => {
-    clearInterval(ref.current)
-  }
+    clearInterval(ref.current);
+  };
 
   const start = () => {
     ref.current = window.setInterval(() => {
-      setTimer((time) => time - 1)
-    }, 1000)
-  }
+      setTimer((time) => time - 1);
+    }, 1000);
+  };
 
   useEffect(() => {
-    start()
+    start();
 
-    return () => clear()
-  }, [])
+    return () => clear();
+  }, []);
 
   useEffect(() => {
     if (timer === 0) {
-      clear()
+      clear();
     }
-  }, [timer])
+  }, [timer]);
 
   const onReSendCode = () => {
     sendCode.mutateAsync({ email }).then(() => {
-      setTimer(59)
-      start()
-    })
-  }
+      setTimer(59);
+      start();
+    });
+  };
 
   return (
     <div className={styles.resend}>
       {timer ? (
         <p>
-          {t('resetForm.resendSmsAfter')} <span>00:{timer < 10 ? `0${timer}` : timer}</span>
+          {t("resetForm.resendSmsAfter")}{" "}
+          <span className={styles.timer}>
+            00:{timer < 10 ? `0${timer}` : timer}
+          </span>
         </p>
       ) : (
-        <Button loading={sendCode.isPending} type='link' onClick={onReSendCode}>
-          {t('resetForm.resendSmsAfter')}
+        <Button loading={sendCode.isPending} type="link" onClick={onReSendCode}>
+          {t("resetForm.resend")}
         </Button>
       )}
     </div>
-  )
-}
+  );
+};

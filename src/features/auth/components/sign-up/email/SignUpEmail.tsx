@@ -53,7 +53,7 @@ export const SignUpEmail = ({ afterSuccess }: Props) => {
           type="primary"
           htmlType="submit"
         >
-          {t("enterEmail.continue")}
+          Continue
         </Button>
         <div className={styles.body__sign_up}>
           {t("signInPrompt")}{" "}

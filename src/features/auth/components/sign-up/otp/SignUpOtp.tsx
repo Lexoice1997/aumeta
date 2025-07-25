@@ -33,9 +33,10 @@ export const SignUpVerifyCode: FC<Props> = ({
 
   return (
     <div className={styles.code}>
-      <p>
+      <h3>
         {t("enterEmail.confirmationCode")}: {email}
-      </p>
+      </h3>
+      <p>{t("enterEmail.hint")}</p>
       <OTPInput
         value={code}
         onChange={setCode}
@@ -51,7 +52,7 @@ export const SignUpVerifyCode: FC<Props> = ({
         onClick={onVerifyCode}
         type="primary"
       >
-        {t("enterEmail.continue")}
+        {t("enterEmail.confirm")}
       </Button>
       <Button type="link" onClick={onBack}>
         {t("enterEmail.back")}

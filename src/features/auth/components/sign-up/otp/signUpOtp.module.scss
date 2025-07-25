@@ -33,7 +33,7 @@
     justify-content: center;
     margin: functions.rem(12) 0 functions.rem(24);
 
-    p {
+    h3 {
       color: var(--gray-500);
       font-size: functions.rem(14);
       font-weight: 400;
@@ -42,6 +42,14 @@
       span {
         color: var(--blue-600);
       }
+    }
+
+    p {
+      padding: 2rem 0;
+    }
+
+    .timer {
+      color: var(--blue-500);
     }
 
     button {
