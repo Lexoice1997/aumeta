@@ -148,7 +148,7 @@ export const MainLayout = () => {
                 type="primary"
                 onClick={navigateToAuth}
               >
-                {authT("registerButton")}
+                {authT("registerButtonHeader")}
               </Button>
             )}
             <Button
