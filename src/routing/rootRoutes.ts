@@ -1,6 +1,6 @@
 import { CheckAuth } from "@components/check-auth/CheckAuth"
 import { MainLayout } from "@components/main-layout/MainLayout"
-import { Redirect } from "@components/redirect/Redirect"
+// import { Redirect } from "@components/redirect/Redirect"
 import { Forbidden } from "@pages/forbidden/Forbidden"
 import { NotFound } from "@pages/not-found/NotFound"
 import { ROOT_INDEX } from "@utils/constants/rootIndex"
@@ -13,6 +13,7 @@ import { SignIn } from "../features/auth/pages/sign-in/SignIn"
 import { SignUpPage } from "../features/auth/pages/sign-up/SignUp"
 import { MainPage } from "../features/main/Index"
 import { ProfilePage } from "../features/profile/Index"
+import { HomePage } from "../features/home"
 
 export const mainRoutes: RouteModel[] = [
   {
@@ -22,13 +23,17 @@ export const mainRoutes: RouteModel[] = [
 ]
 
 export const rootRoutes: RouteModel[] = [
-  {
-    path: ROOT_INDEX,
-    element: Redirect,
-  },
+  // {
+  //   path: ROOT_INDEX,
+  //   element: Redirect,
+  // },
   {
     element: MainLayout,
     children: [
+      {
+        path: ROOT_INDEX,
+        element: HomePage,
+      },
       {
         path: rootPaths.MAIN.INDEX,
         element: MainPage,

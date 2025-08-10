@@ -8,5 +8,5 @@ type Props = {
 }
 
 export const Redirect: FC<Props> = ({ to }) => {
-  return <Navigate to={to ?? rootPaths.MAIN.INDEX} />
+  return <Navigate to={to ?? rootPaths.HOME.INDEX} />
 }
